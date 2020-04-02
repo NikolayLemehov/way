@@ -6,7 +6,7 @@ module.exports = {
   mode: `development`, // Режим сборки
   entry: {
     main: `./js/main.js`,
-    vendor: `./js/vendor.js`,
+    // vendor: `./js/vendor.js`,
   }, // Точка входа приложения
   output: {// Настройка выходного файла
     filename: `[name].js`,
