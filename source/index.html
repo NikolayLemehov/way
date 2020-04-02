@@ -10,9 +10,33 @@
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
-<!--    <div style="display: none;">-->
-<!--      <include src="build/img/sprite_auto.svg"></include>-->
-<!--    </div>-->
+    <div style="display: none;">
+      <include src="build/img/sprite_auto.svg"></include>
+    </div>
+    <header class="page-header">
+      <nav>
+        <div class="page-header__logo">
+          <a>
+            <svg width="58" height="22">
+              <use xlink:href="#icon-logo-desktop"></use>
+            </svg>
+            <span class="visually-hidden">Лого</span>
+          </a>
+        </div>
+        <ul class="page-header__menu">
+          <li><a class="scroll-to" href="#">О путешествии</a></li>
+          <li><a class="scroll-to" href="#">Цены</a></li>
+        </ul>
+        <div class="page-header__phone">
+          <a href="tel:+749978468446">
+            <svg width="30" height="30">
+              <use xlink:href="#icon-phone"></use>
+            </svg>
+            <span>+7 (499) -784-684-46</span>
+          </a>
+        </div>
+      </nav>
+    </header>
     <script src="js/main.js"></script>
   </body>
 </html>

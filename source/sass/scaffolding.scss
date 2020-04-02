@@ -12,6 +12,16 @@ body {
   font-family: "Montserrat", "Arial", sans-serif;
 }
 
+// для devtools
+@media (max-width: $desktop-width - 1) {
+  padding: 0;
+}
+
+// для devtools
+@media (min-width: $desktop-width) {
+  padding: 0;
+}
+
 img {
   max-width: 100%;
   height: auto;
