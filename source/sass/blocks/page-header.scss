@@ -90,14 +90,23 @@
   .page-header nav {
     position: relative;
     width: 100vw;
-    padding: 0 0 0 21px;
+    padding: 0;
+  }
+
+  .page-header--nojs nav {
+    flex-direction: column;
   }
 
   .page-header__logo {
-    margin: 16px 0 0;
+    margin: 16px 0 0 21px;
 
     .page-header:not(.page-header--close) & {
       display: none;
+    }
+
+    .page-header--nojs &,
+    .page-header--nojs:not(.page-header--close) & {
+      display: block;
     }
   }
 
@@ -146,6 +155,11 @@
     .page-header--close & {
       display: none;
     }
+
+    .page-header--nojs & {
+      position: static;
+      display: block;
+    }
   }
 
   .page-header__menu li {
@@ -181,7 +195,11 @@
 
 @media (max-width: $tablet-width - 1) {
   .page-header nav {
-    padding: 0 0 0 16px;
+    padding: 0;
+  }
+
+  .page-header__logo {
+    margin: 16px 0 0 16px;
   }
 
   .page-header--close .page-header__menu button {
