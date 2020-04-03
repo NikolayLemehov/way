@@ -4,5 +4,5 @@ import PageHeader from './page-header';
 
 activeForEeachNodeListForIE();
 activeSmoothScroll();
-const pageHeader = new PageHeader();
+const pageHeader = new PageHeader(document.querySelector(`.page-header`));
 pageHeader.active();

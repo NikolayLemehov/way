@@ -1,11 +1,11 @@
 const KEY_CODE_ESC = 27;
 
 export default class PageHeader {
-  constructor() {
-    this.element = document.querySelector(`.page-header`);
-    this.btn = this.element ? this.element.querySelector(`.page-header__menu > button`) : null;
-    this.menuItems = this.element ? this.element.querySelectorAll(`.page-header__menu .scroll-to`) : null;
-    this.isAllExisting = this.element && this.btn && this.menuItems.length > 0;
+  constructor(element) {
+    this.element = element;
+    this.btn = element ? element.querySelector(`.page-header__menu > button`) : null;
+    this.menuItems = element ? element.querySelectorAll(`.page-header__menu .scroll-to`) : null;
+    this.isAllExisting = element && this.btn && this.menuItems.length > 0;
 
     this._onDocumentMenuEscKeyDown = this._onDocumentMenuEscKeyDown.bind(this);
   }
