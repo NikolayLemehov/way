@@ -1,3 +1,5 @@
+import {getScrollbarWidth} from './utils';
+
 const KEY_CODE_ESC = 27;
 
 export default class PageHeader {
@@ -36,6 +38,9 @@ export default class PageHeader {
   }
 
   _closeMenu() {
+    document.documentElement.style.overflow = ``;
+    document.documentElement.style.paddingRight = ``;
+
     if (!this.element.classList.contains(`page-header--close`)) {
       this.element.classList.add(`page-header--close`);
     }
@@ -46,6 +51,9 @@ export default class PageHeader {
   }
 
   _openMenu() {
+    document.documentElement.style.overflow = `hidden`;
+    document.documentElement.style.paddingRight = `${getScrollbarWidth()}px`;
+
     if (this.element.classList.contains(`page-header--close`)) {
       this.element.classList.remove(`page-header--close`);
     }

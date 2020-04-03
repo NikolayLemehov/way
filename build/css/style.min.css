@@ -446,7 +446,7 @@ input[type="radio"].visually-hidden {
 @media (max-width: 1023px) {
   .page-header nav {
     position: relative;
-    width: 100vw;
+    width: 100%;
     min-height: 50px;
     padding: 0; }
   .page-header--nojs nav {
@@ -494,7 +494,7 @@ input[type="radio"].visually-hidden {
     min-height: 100vh;
     margin: 0;
     padding: 134px 0 calc(82px - 30px);
-    background-color: #ffffff;
+    background-color: rgba(255, 0, 0, 0.1);
     -webkit-transition: all 0.3s ease-in;
     transition: all 0.3s ease-in; }
     .page-header--close .page-header__menu ul {
