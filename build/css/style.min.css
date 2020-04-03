@@ -494,9 +494,11 @@ input[type="radio"].visually-hidden {
     min-height: 100vh;
     margin: 0;
     padding: 134px 0 calc(82px - 30px);
-    background-color: #ffffff; }
+    background-color: #ffffff;
+    -webkit-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in; }
     .page-header--close .page-header__menu ul {
-      display: none; }
+      left: -100vw; }
     .page-header--nojs .page-header__menu ul {
       position: static;
       display: block; }

@@ -157,9 +157,10 @@
     margin: 0;
     padding: 134px 0 calc(82px - 30px);
     background-color: $color_white;
+    transition: $transition;
 
     .page-header--close & {
-      display: none;
+      left: -100vw;
     }
 
     .page-header--nojs & {

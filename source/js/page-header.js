@@ -18,6 +18,7 @@ export default class PageHeader {
       this.element.classList.remove(`page-header--nojs`);
     }
     this.btn.removeAttribute(`style`);
+    this._closeMenu();
 
     this.menuItems.forEach((it) => {
       it.addEventListener(`click`, () => {
@@ -27,9 +28,10 @@ export default class PageHeader {
     this.btn.addEventListener(`click`, (evt) => {
       evt.preventDefault();
       if (this.element.classList.contains(`page-header--close`)) {
-        document.addEventListener(`keydown`, this._onDocumentMenuEscKeyDown);
+        this._openMenu();
+      } else {
+        this._closeMenu();
       }
-      this.element.classList.toggle(`page-header--close`);
     });
   }
 
@@ -38,6 +40,19 @@ export default class PageHeader {
       this.element.classList.add(`page-header--close`);
     }
     document.removeEventListener(`keydown`, this._onDocumentMenuEscKeyDown);
+    this.menuItems.forEach((it) => {
+      it.tabIndex = `-1`;
+    });
+  }
+
+  _openMenu() {
+    if (this.element.classList.contains(`page-header--close`)) {
+      this.element.classList.remove(`page-header--close`);
+    }
+    document.addEventListener(`keydown`, this._onDocumentMenuEscKeyDown);
+    this.menuItems.forEach((it) => {
+      it.removeAttribute(`tabindex`);
+    });
   }
 
   _onDocumentMenuEscKeyDown(evt) {
