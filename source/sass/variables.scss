@@ -1,10 +1,13 @@
-// points, containers
+// points
 
-$desktop_width:                   1200px;
-$desktop_container_width:         1024px;
+$desktop_width:                   1024px;
 $tablet_width:                     768px;
-$tablet_container_width:           726px;
 $mobile_width:                     320px;
+
+// containers
+
+$desktop_container_width:         1200px;
+$tablet_container_width:           726px;
 $mobile_container_width:           290px;
 
 // prefix

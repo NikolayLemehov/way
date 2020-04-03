@@ -1,6 +1,6 @@
 .page-header nav {
   display: flex;
-  width: $desktop_width;
+  width: $desktop_container_width;
   margin: 0 auto;
   padding: 37px 21px 25px 23px;
 }
@@ -81,14 +81,14 @@
   stroke: $color_pink;
 }
 
-@media (max-width: $desktop_width - 1) {
+@media (max-width: $desktop_container_width - 1) {
   .page-header nav {
     width: calc(100vw - 2 * 15px);
     padding: 37px calc(21px - 15px) 25px calc(23px - 15px);
   }
 }
 
-@media (max-width: $desktop_container_width - 1) {
+@media (max-width: $desktop_width - 1) {
   .page-header nav {
     position: relative;
     width: 100vw;
