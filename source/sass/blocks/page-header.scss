@@ -14,9 +14,17 @@
 }
 
 .page-header__menu {
+  margin: 6px 0 0 auto;
+}
+
+.page-header__menu button {
+  display: none;
+}
+
+.page-header__menu ul {
   list-style: none;
   display: flex;
-  margin: 6px calc(-39px + 53px) 0 auto;
+  margin: 0 calc(53px - 39px) 0 0;
   padding: 0;
 }
 
@@ -75,5 +83,108 @@
   .page-header nav {
     width: calc(100vw - 2 * 15px);
     padding: 37px calc(21px - 15px) 25px calc(23px - 15px);
+  }
+}
+
+@media (max-width: $desktop-container-width - 1) {
+  .page-header nav {
+    position: relative;
+    width: 100vw;
+    padding: 0 0 0 21px;
+  }
+
+  .page-header__logo {
+    margin: 16px 0 0;
+
+    .page-header:not(.page-header--close) & {
+      display: none;
+    }
+  }
+
+  .page-header__logo svg {
+    width: 44px;
+  }
+
+  .page-header__menu button {
+    display: block;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+
+    .page-header--close & {
+      padding: 10px 21px;
+      background-color: $color-accent-basic;
+    }
+  }
+
+  .page-header__btn-img {
+    display: none;
+
+    .page-header--close &--open {
+      display: block;
+    }
+
+    .page-header:not(.page-header--close) &--close {
+      display: block;
+    }
+  }
+
+  .page-header__menu {
+    margin: 0 0 0 auto;
+  }
+
+  .page-header__menu ul {
+    position: absolute;
+    left: 0;
+    flex-direction: column;
+    width: 100vw;
+    min-height: 568px;
+    margin: 0;
+    padding: 82px 0 calc(82px - 30px);
+    background-color: #ffffff;
+
+    .page-header--close & {
+      display: none;
+    }
+  }
+
+  .page-header__menu li {
+    margin: 0 0 30px;
+  }
+
+  .page-header__menu a {
+    position: relative;
+    padding: 15px 50px 17px 16px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 140%;
+    letter-spacing: 1px;
+    color: #48494d;
+    background-color: $color-light;
+  }
+
+  .page-header__menu a::after {
+    content: "";
+    position: absolute;
+    right: 24px;
+    top: calc(50% - 12px / 2 - 1px);
+    width: 8px;
+    height: 12px;
+    background: url("#{$prefix-css-img}arrow-right.svg") no-repeat 0 0;
+  }
+
+  .page-header__phone {
+    display: none;
+  }
+}
+
+@media (max-width: $tablet-width - 1) {
+  .page-header nav {
+    padding: 0 0 0 16px;
+  }
+
+  .page-header--close .page-header__menu button {
+    padding: 10px;
   }
 }

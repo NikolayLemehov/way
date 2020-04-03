@@ -13,7 +13,7 @@
     <div style="display: none;">
       <include src="build/img/sprite_auto.svg"></include>
     </div>
-    <header class="page-header">
+    <header class="page-header page-header--close page-header--nojs">
       <nav>
         <div class="page-header__logo">
           <a>
@@ -23,10 +23,20 @@
             <span class="visually-hidden">Лого</span>
           </a>
         </div>
-        <ul class="page-header__menu">
-          <li><a class="scroll-to" href="#">О путешествии</a></li>
-          <li><a class="scroll-to" href="#">Цены</a></li>
-        </ul>
+        <div class="page-header__menu">
+          <button type="button" aria-label="Переключатель меню" style="display: none;">
+            <svg class="page-header__btn-img page-header__btn-img--open" width="30" height="30" aria-label="Открыть меню: бургер">
+              <use xlink:href="#icon-btn-burger"></use>
+            </svg>
+            <svg class="page-header__btn-img page-header__btn-img--close" width="50" height="52" aria-label="Закрыть меню: крестик">
+              <use xlink:href="#icon-btn-close"></use>
+            </svg>
+          </button>
+          <ul class="page-header__menu">
+            <li><a class="scroll-to" href="#">О путешествии</a></li>
+            <li><a class="scroll-to" href="#">Цены</a></li>
+          </ul>
+        </div>
         <div class="page-header__phone">
           <a href="tel:+749978468446" aria-label="Телефон компании">
             <svg width="30" height="30">

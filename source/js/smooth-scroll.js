@@ -6,9 +6,15 @@ const activeSmoothScroll = () => {
       evt.preventDefault();
 
       const blockID = anchor.getAttribute(`href`);
-      const target = document.querySelector(blockID);
-
-      doScrolling(target.getBoundingClientRect().top, 800);
+      let target = null;
+      try {
+        target = document.querySelector(blockID);
+      } catch (error) {
+        return;
+      }
+      if (target) {
+        doScrolling(target.getBoundingClientRect().top, 800);
+      }
     });
   });
 };

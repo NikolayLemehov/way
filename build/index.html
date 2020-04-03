@@ -11,7 +11,12 @@
   </head>
   <body>
     <div style="display: none;">
-      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-burger-menu" viewBox="0 0 30 30">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-btn-burger" viewBox="0 0 30 30">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M3.75 21H26.25V20H3.75V21ZM3.75 14.75H26.25V13.75H3.75V14.75ZM3.75 7.5V8.5H26.25V7.5H3.75Z" fill="white"></path>
+</symbol><symbol id="icon-btn-close" viewBox="0 0 50 52">
+<rect width="50" height="52" fill="white"></rect>
+<path d="M14 37.7213L36 15M36 37.7213L14 15" stroke="#141517" stroke-opacity="0.2" stroke-linecap="round" stroke-linejoin="round"></path>
+</symbol><symbol id="icon-burger-menu" viewBox="0 0 30 30">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M3.75 21H26.25V20H3.75V21ZM3.75 14.75H26.25V13.75H3.75V14.75ZM3.75 7.5V8.5H26.25V7.5H3.75Z" fill="white"></path>
 </symbol><symbol id="icon-item1" viewBox="0 0 22 22">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M17.6138 5.21059C18.0498 5.54958 18.1285 6.17784 17.7895 6.61385L10.0145 16.6138C9.84138 16.8365 9.58223 16.9758 9.30094 16.9972C9.01966 17.0186 8.74242 16.9202 8.53757 16.7262L4.3125 12.7262C3.91144 12.3465 3.89412 11.7136 4.27382 11.3126C4.65351 10.9115 5.28644 10.8942 5.6875 11.2739L9.11216 14.5161L16.2105 5.38625C16.5495 4.95024 17.1778 4.87159 17.6138 5.21059Z" fill="#141517"></path>
@@ -30,7 +35,7 @@
 <path d="M7.39635 8.62432C7.31179 7.42623 7.57753 6.24606 8.28114 5.29684C8.89115 4.43632 9.68536 3.96636 10.6426 3.69172C11.4489 3.4525 11.9774 3.74561 12.2099 4.64204C12.5421 5.98224 13.0162 7.3225 13.1884 8.73361C13.2427 9.35485 12.8411 10.2332 12.4062 10.6856C11.3161 11.7589 11.5426 12.5399 12.37 14.1643C12.6267 14.6881 13.0344 15.5934 13.8286 16.7919C14.656 17.9992 15.0939 18.6472 16.1569 18.0975C17.3376 17.5035 18.1983 17.8855 19.0891 18.8444C19.6931 19.5369 20.3574 20.1318 20.9614 20.8243C21.8341 21.8542 21.7949 22.5641 21.1124 23.2915C19.8833 24.6309 17.854 25.0736 16.3441 24.1766C15.5106 23.6881 14.6802 23.0487 14.0188 22.303C11.1047 18.9825 9.00291 15.1212 7.73759 10.7632C7.53526 10.0265 7.44165 9.28104 7.39635 8.62432Z" stroke-width="2" stroke-miterlimit="10"></path>
 </symbol></svg>
     </div>
-    <header class="page-header">
+    <header class="page-header page-header--close page-header--nojs">
       <nav>
         <div class="page-header__logo">
           <a>
@@ -40,10 +45,20 @@
             <span class="visually-hidden">Лого</span>
           </a>
         </div>
-        <ul class="page-header__menu">
-          <li><a class="scroll-to" href="#">О путешествии</a></li>
-          <li><a class="scroll-to" href="#">Цены</a></li>
-        </ul>
+        <div class="page-header__menu">
+          <button type="button" aria-label="Переключатель меню" style="display: none;">
+            <svg class="page-header__btn-img page-header__btn-img--open" width="30" height="30" aria-label="Открыть меню: бургер">
+              <use xlink:href="#icon-btn-burger"></use>
+            </svg>
+            <svg class="page-header__btn-img page-header__btn-img--close" width="50" height="52" aria-label="Закрыть меню: крестик">
+              <use xlink:href="#icon-btn-close"></use>
+            </svg>
+          </button>
+          <ul class="page-header__menu">
+            <li><a class="scroll-to" href="#">О путешествии</a></li>
+            <li><a class="scroll-to" href="#">Цены</a></li>
+          </ul>
+        </div>
         <div class="page-header__phone">
           <a href="tel:+749978468446" aria-label="Телефон компании">
             <svg width="30" height="30">
