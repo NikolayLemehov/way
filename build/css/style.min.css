@@ -407,10 +407,8 @@ input[type="radio"].visually-hidden {
   letter-spacing: 0.1em;
   text-decoration: none;
   color: #141517;
-  -webkit-transition-property: color, opacity;
-  transition-property: color, opacity;
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s; }
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in; }
   .page-header__menu a:hover {
     color: #fe7865; }
   .page-header__menu a:active {
@@ -427,8 +425,8 @@ input[type="radio"].visually-hidden {
   line-height: 32px;
   white-space: nowrap;
   color: #fe7865;
-  -webkit-transition: 0.3s;
-  transition: 0.3s; }
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in; }
   .page-header__phone a:hover {
     opacity: 0.6; }
   .page-header__phone a:active {
@@ -449,6 +447,7 @@ input[type="radio"].visually-hidden {
   .page-header nav {
     position: relative;
     width: 100vw;
+    min-height: 50px;
     padding: 0; }
   .page-header--nojs nav {
     -webkit-box-orient: vertical;
@@ -465,6 +464,10 @@ input[type="radio"].visually-hidden {
   .page-header__logo svg {
     width: 44px; }
   .page-header__menu button {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 0;
     display: block;
     padding: 0;
     background-color: transparent;
@@ -488,9 +491,9 @@ input[type="radio"].visually-hidden {
         -ms-flex-direction: column;
             flex-direction: column;
     width: 100vw;
-    min-height: 568px;
+    min-height: 100vh;
     margin: 0;
-    padding: 82px 0 calc(82px - 30px);
+    padding: 134px 0 calc(82px - 30px);
     background-color: #ffffff; }
     .page-header--close .page-header__menu ul {
       display: none; }
