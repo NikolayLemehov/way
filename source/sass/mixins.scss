@@ -1,6 +1,6 @@
 @mixin bg-retina($retina-img: "") {
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("#{$prefix-css-img}#{$retina-img}");
+  @media (min-resolution: $retina_dpi), (min-resolution: $retina_dppx) {
+    background-image: url("#{$prefix_css_img}#{$retina-img}");
   }
 }
 

@@ -1,6 +1,6 @@
 .page-header nav {
   display: flex;
-  width: $desktop-width;
+  width: $desktop_width;
   margin: 0 auto;
   padding: 37px 21px 25px 23px;
 }
@@ -40,16 +40,16 @@
   line-height: 17px;
   letter-spacing: 0.1em;
   text-decoration: none;
-  color: $color-darkest-darkest;
+  color: $color_darkest_darkest;
   transition-property: color, opacity;
   transition-duration: $duration;
 
   &:hover {
-    color: $color-accent-basic;
+    color: $color_accent_basic;
   }
 
   &:active {
-    color: $color-accent-basic;
+    color: $color_accent_basic;
     opacity: 0.3;
   }
 }
@@ -60,7 +60,7 @@
   font-weight: normal;
   font-size: 18px;
   line-height: 32px;
-  color: $color-accent-basic;
+  color: $color_accent_basic;
   transition: $duration;
 
   &:hover {
@@ -76,17 +76,17 @@
   display: block;
   margin: 1px 9px 0 0;
   fill: transparent;
-  stroke: #fe8978;
+  stroke: $color_pink;
 }
 
-@media (max-width: $desktop-width - 1) {
+@media (max-width: $desktop_width - 1) {
   .page-header nav {
     width: calc(100vw - 2 * 15px);
     padding: 37px calc(21px - 15px) 25px calc(23px - 15px);
   }
 }
 
-@media (max-width: $desktop-container-width - 1) {
+@media (max-width: $desktop_container_width - 1) {
   .page-header nav {
     position: relative;
     width: 100vw;
@@ -122,7 +122,7 @@
 
     .page-header--close & {
       padding: 10px 21px;
-      background-color: $color-accent-basic;
+      background-color: $color_accent_basic;
     }
   }
 
@@ -150,7 +150,7 @@
     min-height: 568px;
     margin: 0;
     padding: 82px 0 calc(82px - 30px);
-    background-color: #ffffff;
+    background-color: $color_white;
 
     .page-header--close & {
       display: none;
@@ -174,8 +174,8 @@
     font-size: 20px;
     line-height: 140%;
     letter-spacing: 1px;
-    color: #48494d;
-    background-color: $color-light;
+    color: $color_text;
+    background-color: $color_light;
   }
 
   .page-header__menu a::after {
@@ -185,7 +185,7 @@
     top: calc(50% - 12px / 2 - 1px);
     width: 8px;
     height: 12px;
-    background: url("#{$prefix-css-img}arrow-right.svg") no-repeat 0 0;
+    background: url("#{$prefix_css_img}arrow-right.svg") no-repeat 0 0;
   }
 
   .page-header__phone {
@@ -193,7 +193,7 @@
   }
 }
 
-@media (max-width: $tablet-width - 1) {
+@media (max-width: $tablet_width - 1) {
   .page-header nav {
     padding: 0;
   }

@@ -1,15 +1,38 @@
-$desktop-width: 1200px;
-$desktop-container-width: 1024px;
-$tablet-width: 768px;
-$tablet-container-width: 726px;
-$mobile-width: 320px;
-$mobile-container-width: 290px;
-$prefix-css-img: "../img/";
-$retina-dpi: 144dpi;
-$retina-dppx: 1.5dppx;
-$color-accent-basic: #fe7865;
-$color-hover-accent: #f17d4b;
-$color-darkest-darkest: #141517;
-$color-dark: #2c2e3f;
-$color-light: #fbf8f8; // пока 1шт, есть подозрение что их больше, удалится либо переменная, либо примечание (название из layout)
-$duration: 0.3s;
+// points, containers
+
+$desktop_width:                   1200px;
+$desktop_container_width:         1024px;
+$tablet_width:                     768px;
+$tablet_container_width:           726px;
+$mobile_width:                     320px;
+$mobile_container_width:           290px;
+
+// prefix
+
+$prefix_css_img:               "../img/";
+
+// retina
+
+$retina_dpi:                      144dpi;
+$retina_dppx:                    1.5dppx;
+
+// colors
+// именованные в макете
+$color_darkest_darkest:          #141517;
+$color_accent_basic:             #fe7865;
+$color_additional:               #d7d9df;
+$color_light:                    #fbf8f8;
+$color_hover_accent:             #f17d4b;
+$color_dark:                     #2c2e3f;
+$color_text:                     #48494d;
+// не именованные в макете
+$color_white:                    #ffffff;
+$color_black:                    #000000;
+$color_pink:                     #fe8978;
+$color_gray1:                    #d8d8d8;
+$color_gray2:                    #c4c4c4;
+$color_gray3:                    #393939;
+
+// duration
+
+$duration:                          0.3s;
