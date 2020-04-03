@@ -6,7 +6,7 @@
 }
 
 .page-header__logo {
-  margin: 2px 20px 0 0;
+  margin: 2px 40px 0 0;
 }
 
 .page-header__logo svg {
@@ -24,12 +24,13 @@
 .page-header__menu ul {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   margin: 0 calc(53px - 39px) 0 0;
   padding: 0;
 }
 
 .page-header__menu li {
-  margin: 0 39px 0 0;
+  margin: 0 39px 15px 0;
 }
 
 .page-header__menu a {
@@ -60,6 +61,7 @@
   font-weight: normal;
   font-size: 18px;
   line-height: 32px;
+  white-space: nowrap;
   color: $color_accent_basic;
   transition: $duration;
 
