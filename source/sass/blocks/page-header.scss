@@ -42,8 +42,7 @@
   letter-spacing: 0.1em;
   text-decoration: none;
   color: $color_darkest_darkest;
-  transition-property: color, opacity;
-  transition-duration: $duration;
+  transition: $transition;
 
   &:hover {
     color: $color_accent_basic;
@@ -63,7 +62,7 @@
   line-height: 32px;
   white-space: nowrap;
   color: $color_accent_basic;
-  transition: $duration;
+  transition: $transition;
 
   &:hover {
     opacity: 0.6;
