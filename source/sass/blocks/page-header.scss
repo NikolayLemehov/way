@@ -156,8 +156,7 @@
     min-height: 100vh;
     margin: 0;
     padding: 134px 0 calc(82px - 30px);
-    //background-color: $color_white;
-    background-color: hsla(0, 100%, 50%, 0.1);
+    background-color: $color_white;
     transition: $transition;
 
     .page-header--close & {
