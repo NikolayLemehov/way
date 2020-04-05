@@ -3,6 +3,18 @@
   $corporate_trip_width: 32.5%;
   $contacts_width: 100% - $next_trip_width - $corporate_trip_width;
 
+  @mixin separator {
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 1px;
+      height: calc(100% - 8px);
+      background-color: $color_additional;
+    }
+  }
+
   .page-footer {
     margin-top: 4762px;
   }
@@ -52,9 +64,10 @@
   }
 
   .page-footer__contacts {
+    @include separator;
+    position: relative;
     width: $contacts_width;
     padding: 0 0 0 90px;
-    border-left: 1px solid $color_additional;
   }
 
   .page-footer__contacts h3 {
@@ -104,13 +117,19 @@
     word-wrap: break-word;
   }
 
+  .page-footer__contact-mail--tablet {
+    display: none;
+  }
+
   .page-footer__corporate-trip {
+    @include separator;
+    position: relative;
     width: $corporate_trip_width;
     padding: 0 0 0 51px;
-    border-left: 1px solid $color_additional;
   }
 
   .page-footer__corporate-trip p {
+    margin: 0;
     padding: 0;
     font-style: normal;
     font-weight: normal;
@@ -132,8 +151,64 @@
       $max_pl: 90px;
       $min_pl: 40px;
       $rate: ($max_pl - $min_pl) / ($max_view - $min_view);
-      flex-grow: 0;
       padding: 0 0 0 calc((100vw - #{$min_view}) * #{$rate} + #{$min_pl});
+    }
+  }
+
+  @media (max-width: $desktop_width - 1) {
+    $next_trip_width: 54.3%;
+    $contacts_width: 100% - $next_trip_width;
+    //$contacts_width: 100% - $next_trip_width - $corporate_trip_width;
+
+    @mixin separator {
+      &::before {
+        //content: "";
+        //position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 1px;
+        //background-color: $color_additional;
+      }
+    }
+
+    .page-footer {
+      margin-top: 4435px;
+    }
+
+    .page-footer__inner {
+      flex-wrap: wrap;
+      width: $tablet_container_width;
+      padding: 80px 0 51px;
+    }
+
+    .page-footer__next-trip {
+      width: $next_trip_width;
+      padding: 0 20px 0 0;
+    }
+
+    .page-footer__contacts {
+      width: $contacts_width;
+      padding: 0 0 0 50px;
+    }
+
+    .page-footer__contact-mail {
+      &--desktop {
+        display: none;
+      }
+
+      &--tablet {
+        display: block;
+        letter-spacing: 1px;
+      }
+    }
+
+    .page-footer__corporate-trip {
+      @include separator;
+      width: 100%;
+      margin: 20px 0 0;
+      padding: 30px 0 0;
+      text-align: center;
     }
   }
 }
