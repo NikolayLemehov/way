@@ -1,13 +1,16 @@
 import {getScrollbarWidth} from './utils';
+import {debounce} from './debounce';
 
 const KEY_CODE_ESC = 27;
+const DELAY_DEL_ATTRIBUTE = 300;
 
 export default class PageHeader {
   constructor(element) {
     this.element = element;
     this.btn = element ? element.querySelector(`.page-header__menu > button`) : null;
+    this.menu = element ? element.querySelector(`.page-header__menu ul`) : null;
     this.menuItems = element ? element.querySelectorAll(`.page-header__menu .scroll-to`) : null;
-    this.isAllExisting = element && this.btn && this.menuItems.length > 0;
+    this.isAllExisting = element && this.btn && this.menu && this.menuItems.length > 0;
 
     this._onDocumentMenuEscKeyDown = this._onDocumentMenuEscKeyDown.bind(this);
   }
@@ -34,6 +37,14 @@ export default class PageHeader {
       } else {
         this._closeMenu();
       }
+    });
+    const delAttribute = () => {
+      this.menu.removeAttribute(`style`);
+    };
+    const debounceDelAttribute = debounce(delAttribute, DELAY_DEL_ATTRIBUTE);
+    window.addEventListener(`resize`, () => {
+      this.menu.style.display = `none`;
+      debounceDelAttribute();
     });
   }
 
