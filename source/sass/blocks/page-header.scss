@@ -162,10 +162,11 @@
     margin: 0;
     padding: 134px 0 calc(82px - 30px);
     background-color: $color_white;
-    transition: left $transition;
+    transition: transform $transition;
 
     .page-header--close & {
-      left: -100vw;
+      //left: -100vw;
+      transform: translateX(-100%);
     }
 
     .page-header--nojs & {

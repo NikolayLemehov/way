@@ -43,7 +43,9 @@ export default class PageHeader {
     };
     const debounceDelAttribute = debounce(delAttribute, DELAY_DEL_ATTRIBUTE);
     window.addEventListener(`resize`, () => {
-      this.menu.style.display = `none`;
+      if (this.element.classList.contains(`page-header--close`)) {
+        this.menu.style.display = `none`;
+      }
       debounceDelAttribute();
     });
   }
