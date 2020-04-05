@@ -25,7 +25,7 @@
   }
 
   .page-footer {
-    margin-top: 4762px;
+    margin-top: auto;
   }
 
   .page-footer__inner {
@@ -189,7 +189,7 @@
     $contacts_width: 100% - $next_trip_width;
 
     .page-footer {
-      margin-top: 4435px;
+      margin-top: auto;
     }
 
     .page-footer__inner {
@@ -234,7 +234,7 @@
 
   @media (max-width: $tablet_width - 1) {
     .page-footer {
-      margin-top: 6421px;
+      margin-top: auto;
     }
 
     .page-footer__inner {
