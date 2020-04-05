@@ -165,7 +165,6 @@
     transition: transform $transition;
 
     .page-header--close & {
-      //left: -100vw;
       transform: translateX(-100%);
     }
 
