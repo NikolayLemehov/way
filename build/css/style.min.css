@@ -809,4 +809,9 @@ input[type="radio"].visually-hidden {
   .main-block__inner a:active {
     opacity: 0.3; }
 
+@media (max-width: 1199px) {
+  .main-block__inner {
+    width: calc(100vw - 20px);
+    padding: 185px 76px 297px calc((100vw - 1024px) * 1 + 537px); } }
+
 /*# sourceMappingURL=style.min.css.map */

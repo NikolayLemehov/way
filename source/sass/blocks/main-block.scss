@@ -67,3 +67,16 @@
     opacity: 0.3;
   }
 }
+
+@media (max-width: $desktop_container_width - 1) {
+  $max_view: $desktop_container_width;
+  $min_view: $desktop_width;
+
+  .main-block__inner {
+    $max_pl: 713px;
+    $min_pl: 537px;
+    $rate: ($max_pl - $min_pl) / ($max_view - $min_view);
+    width: calc(100vw - 20px);
+    padding: 185px 76px 297px calc((100vw - #{$min_view}) * #{$rate} + #{$min_pl});
+  }
+}
