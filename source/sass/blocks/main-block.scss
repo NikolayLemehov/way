@@ -80,3 +80,42 @@
     padding: 185px 76px 297px calc((100vw - #{$min_view}) * #{$rate} + #{$min_pl});
   }
 }
+
+@media (max-width: $desktop_width - 1) {
+  .main-block {
+    background: $color_dark url("#{$prefix_css_img}main-greece-tablet@1x.jpg") no-repeat center 0;
+
+    @include bg-retina("main-greece-tablet@2x.jpg");
+    background-size: cover;
+  }
+
+  .main-block__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: $tablet_container_width;
+    padding: 60px 151px 83px;
+  }
+
+  .main-block__inner h1 {
+    margin: 0 0 15px;
+    font-size: 30px;
+    line-height: 150%;
+    letter-spacing: 1.5px;
+    text-align: center;
+  }
+
+  .main-block__inner p {
+    margin: 0 0 10px;
+    text-align: center;
+  }
+
+  .main-block__inner a {
+    max-width: none;
+    width: 250px;
+    padding: 20px 90px 18px 41px;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+  }
+}
