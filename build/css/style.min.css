@@ -1122,6 +1122,11 @@ input[type="radio"].visually-hidden {
     background: url("../img/europe-map.svg") no-repeat center 0;
     background-size: 1444px 1089px; }
 
+.visit-place__description-item {
+  display: none; }
+  .visit-place__description-item--active {
+    display: block; }
+
 @media (max-width: 1239px) {
   .visit-place__inner {
     width: calc(100vw - 20px); }

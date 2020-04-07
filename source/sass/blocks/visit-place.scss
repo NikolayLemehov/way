@@ -208,6 +208,14 @@
   }
 }
 
+.visit-place__description-item {
+  display: none;
+
+  &--active {
+    display: block;
+  }
+}
+
 @media (max-width: $desktop_container_width - 1) {
   $max_view: $desktop_container_width;
   $min_view: $desktop_width;
