@@ -147,3 +147,16 @@
   letter-spacing: -0.1px;
   color: $color_dark;
 }
+
+@media (max-width: $desktop_container_width - 1) {
+  $max_view: $desktop_container_width;
+  $min_view: $desktop_width;
+
+  .country {
+    $max_bg_p_diff: 100px;
+    $min_bg_p_diff: 135px;
+    $rate: ($max_bg_p_diff - $min_bg_p_diff) / ($max_view - $min_view);
+    $bg_p_diff: "calc((100vw - #{$min_view}) * #{$rate} + #{$min_bg_p_diff})";
+    background-position: calc(50% + #{$bg_p_diff}) 0;
+  }
+}
