@@ -32,7 +32,7 @@
             </svg>
           </button>
           <ul>
-            <li><a class="scroll-to" href="#">О путешествии</a></li>
+            <li><a class="scroll-to" href="#visit-place">О путешествии</a></li>
             <li><a class="scroll-to" href="#">Цены</a></li>
           </ul>
         </div>
@@ -54,7 +54,97 @@
             В этом туре вы откроете для себя Европу в новом свете. Вас ждет: море, горы,
             а также потрясающая красота природы.
           </p>
-          <a class="scroll-to" href="#">Смотреть тур</a>
+          <a class="scroll-to" href="#visit-place__bookmark-list">Смотреть тур</a>
+        </div>
+      </section>
+      <section class="visit-place" id="visit-place">
+        <div class="visit-place__inner">
+          <h2>Места посещения</h2>
+          <p>Вы можете выбрать полный тур или частичный, с посещением первых 3 мест</p>
+          <ul class="visit-place__image-list">
+            <li>
+              <a class="visit-place__image-link visit-place__image-link--greece scroll-to" href="#visit-place__bookmark-list">
+                <p class="visit-place__pseudo-button">Смотреть подробнее</p>
+                <p class="visit-place__country">Греция</p>
+              </a>
+            </li>
+            <li>
+              <a class="visit-place__image-link visit-place__image-link--albania scroll-to" href="#visit-place__bookmark-list">
+                <p class="visit-place__pseudo-button">Смотреть подробнее</p>
+                <p class="visit-place__country">Албания</p>
+              </a>
+            </li>
+            <li>
+              <a class="visit-place__image-link visit-place__image-link--macedonia scroll-to" href="#visit-place__bookmark-list">
+                <p class="visit-place__pseudo-button">Смотреть подробнее</p>
+                <p class="visit-place__country">Македония</p>
+              </a>
+            </li>
+            <li>
+              <a class="visit-place__image-link visit-place__image-link--montenegro scroll-to" href="#visit-place__bookmark-list">
+                <p class="visit-place__pseudo-button">Смотреть подробнее</p>
+                <p class="visit-place__country">Черногория</p>
+              </a>
+            </li>
+            <li>
+              <a class="visit-place__image-link visit-place__image-link--croatia scroll-to" href="#visit-place__bookmark-list">
+                <p class="visit-place__pseudo-button">Смотреть подробнее</p>
+                <p class="visit-place__country">Хорватия</p>
+              </a>
+            </li>
+          </ul>
+          <ul class="visit-place__bookmark-list" id="visit-place__bookmark-list">
+            <li class="visit-place__bookmark-item visit-place__bookmark-item--greece visit-place__bookmark-item--active">
+              <a href="#">Греция</a>
+            </li>
+            <li class="visit-place__bookmark-item visit-place__bookmark-item--albania">
+              <a href="#">Албания</a>
+            </li>
+            <li class="visit-place__bookmark-item visit-place__bookmark-item--macedonia">
+              <a href="#">Македония</a>
+            </li>
+            <li class="visit-place__bookmark-item visit-place__bookmark-item--montenegro">
+              <a href="#">Черногория</a>
+            </li>
+            <li class="visit-place__bookmark-item visit-place__bookmark-item--croatia">
+              <a href="#">Хорватия</a>
+            </li>
+          </ul>
+          <ul class="visit-place__description-list">
+            <li class="visit-place__description-item">
+              <div class="country">
+                <div class="country__description">
+                  <h3>Греция</h3>
+                  <p>
+                    На севере Греции находится один из крупнейших комплексов монастырей, расположенных
+                    на вершинах скал. Название его «Метеора» буквально переводится как «висящие в воздухе».
+                    Этот монастырь основная цель нашего путешествия в Греции. После покарения скал из
+                    песчанника и обломочной горной породы, достигающих в высоту 600 метров, наградой
+                    будет неописуемая красота природы и атмосфера, царящая в монастырях Метеоры.
+                  </p>
+                  <a href="#">купить тур сейчас</a>
+                </div>
+                <div class="country__review">
+                  <div class="country__review-container">
+                    <h4>Отзывы</h4>
+                    <blockquote>
+                      <p class="country__review-quote">
+                        Метеоры в Греции можно сравнить разве что с Монсерратт в Испании. Такие же высоченные скалы.
+                        Но здесь потрясает масштаб. Огромная территория, высоко в горах. Ощущение такое, как будто
+                        стоишь на краю света!
+                      </p>
+                      <p class="country__review-cite">
+                        <img src="img/reviewer@1x.jpg" width="38" height="38"
+                                srcset="img/reviewer@1x.jpg 1x img/reviewer@2x.jpg 2x"
+                                alt="Аватар Влады Голициной">
+                        <cite>Влада Голицина</cite>
+                      </p>
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
         </div>
       </section>
     </main>

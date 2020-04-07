@@ -46,7 +46,7 @@
   text-decoration: none;
   color: $color_white;
   background-color: $color_accent_basic;
-  transition: opacity $transition;
+  transition: opacity $transition, background-color $transition;
 
   &::after {
     content: "";
@@ -60,11 +60,12 @@
   }
 
   &:hover {
-    opacity: 0.6;
+    background-color: $color_hover_accent;
   }
 
   &:active {
-    opacity: 0.3;
+    background-color: $color_hover_accent;
+    opacity: 0.6;
   }
 }
 
