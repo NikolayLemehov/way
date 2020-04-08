@@ -122,6 +122,17 @@
   }
 }
 
-//@media (max-width: $tablet_width - 1) {
-//
-//}
+@media (max-width: $tablet_width - 1) {
+  .country__inner {
+    padding: 6px 0 60px;
+  }
+
+  .country__bookmark-container {
+    width: calc(100% - 15px);
+    margin: 0 0 0 15px;
+  }
+
+  .country__description-list {
+    padding: 25px 0 0;
+  }
+}

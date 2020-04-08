@@ -201,6 +201,9 @@
   }
 
   .detail-country__review {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     width: auto;
     min-height: 415px;
 
@@ -222,5 +225,65 @@
   .detail-country__review-container {
     width: 382px;
     margin: 80px 0 0;
+  }
+}
+
+@media (max-width: $tablet_width - 1) {
+  .detail-country__description {
+    padding: 0 15px 50px;
+  }
+
+  .detail-country__description h3 {
+    font-size: 24px;
+    line-height: 150%;
+  }
+
+  .detail-country__description p {
+    margin: 0 0 18px;
+  }
+
+  .detail-country__description a {
+    width: 288px;
+  }
+
+  .detail-country__review::after {
+    background: url("#{$prefix_css_img}visit-tab-greece-mobile@1x.jpg") no-repeat center;
+
+    @include bg-retina("visit-tab-greece-mobile@2x.jpg");
+    background-size: cover;
+  }
+
+  .detail-country__review-container {
+    width: 268px;
+    margin: 50px 0 0;
+    padding: 32px 20px 30px;
+    text-align: center;
+  }
+
+  .detail-country__review h4 {
+    padding: 0 0 12px;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 1px;
+
+    &::after {
+      left: calc(50% - 68px / 2);
+    }
+  }
+
+  .detail-country__review-quote {
+    margin: 0 0 17px;
+  }
+
+  .detail-country__review-cite {
+    flex-direction: column;
+  }
+
+  .detail-country__review-cite img {
+    margin: 0 3px 11px 0;
+  }
+
+  .detail-country__review-cite cite {
+    margin: 0 4px 0 0;
   }
 }
