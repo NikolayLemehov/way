@@ -1,6 +1,5 @@
-.country2 {
+.detail-country {
   display: flex;
-  //display: none;
   justify-content: space-between;
   min-height: 600px;
   background: url("#{$prefix_css_img}visit-tab-greece-desktop@1x.jpg") no-repeat calc(50% + 100px) 0;
@@ -8,12 +7,12 @@
   @include bg-retina("visit-tab-greece-desktop@2x.jpg");
 }
 
-.country2__description {
+.detail-country__description {
   width: 384px;
   padding: 11px 0 0;
 }
 
-.country2__description h3 {
+.detail-country__description h3 {
   position: relative;
   margin: 0 0 32px;
   padding: 0 0 16px 1px;
@@ -35,7 +34,7 @@
   }
 }
 
-.country2__description p {
+.detail-country__description p {
   margin: 0 0 48px;
   padding: 0 0 0 1px;
   font-style: normal;
@@ -46,7 +45,7 @@
   color: $color_dark_70;
 }
 
-.country2__description a {
+.detail-country__description a {
   display: block;
   width: 250px;
   margin: 0;
@@ -73,24 +72,24 @@
   }
 }
 
-.country2__review {
+.detail-country__review {
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
   width: 382px;
 }
 
-.country2__review-container {
+.detail-country__review-container {
   margin: 114px 0 0;
   padding: 30px 25px 30px 31px;
   background-color: $color_white;
 }
 
-.country2__review blockquote {
+.detail-country__review blockquote {
   margin: 0;
 }
 
-.country2__review h4 {
+.detail-country__review h4 {
   position: relative;
   margin: 0 0 20px;
   padding: 0 0 13px;
@@ -112,7 +111,7 @@
   }
 }
 
-.country2__review-quote {
+.detail-country__review-quote {
   margin: 0 0 31px;
   font-style: normal;
   font-weight: normal;
@@ -122,13 +121,13 @@
   color: $color_dark_70;
 }
 
-.country2__review-cite {
+.detail-country__review-cite {
   display: flex;
   align-items: center;
   margin: 0;
 }
 
-.country2__review-cite img {
+.detail-country__review-cite img {
   display: block;
   margin: 0 16px 0 0;
   width: 38px;
@@ -137,7 +136,7 @@
   overflow: hidden;
 }
 
-.country2__review-cite cite {
+.detail-country__review-cite cite {
   display: block;
   margin: 5px 0 0;
   font-family: "Poppins", "Arial", sans-serif;
@@ -153,7 +152,7 @@
   $max_view: $desktop_container_width;
   $min_view: $desktop_width;
 
-  .country2 {
+  .detail-country {
     $max_bg_p_diff: 100px;
     $min_bg_p_diff: 135px;
     $rate: ($max_bg_p_diff - $min_bg_p_diff) / ($max_view - $min_view);
@@ -163,13 +162,13 @@
 }
 
 @media (max-width: $desktop_width - 1) {
-  .country2 {
+  .detail-country {
     flex-direction: column;
     align-items: center;
     background: none;
   }
 
-  .country2__description {
+  .detail-country__description {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -179,7 +178,7 @@
     text-align: center;
   }
 
-  .country2__description h3 {
+  .detail-country__description h3 {
     //position: relative;
     //margin: 0 0 32px;
     //padding: 0 0 16px 1px;
@@ -201,7 +200,7 @@
     }
   }
 
-  .country2__description p {
+  .detail-country__description p {
     //margin: 0 0 48px;
     //padding: 0 0 0 1px;
     //font-style: normal;
@@ -212,7 +211,7 @@
     //color: $color_dark_70;
   }
 
-  .country2__description a {
+  .detail-country__description a {
     //display: block;
     //width: 250px;
     //margin: 0;
@@ -229,7 +228,7 @@
     //background-color: $color_accent_basic;
   }
 
-  .country2__review {
+  .detail-country__review {
     //display: flex;
     //justify-content: flex-end;
     //align-items: flex-start;
@@ -251,18 +250,18 @@
     }
   }
 
-  .country2__review-container {
+  .detail-country__review-container {
     width: 382px;
     margin: 50px 0 0;
     //padding: 30px 25px 30px 31px;
     //background-color: $color_white;
   }
 
-  .country2__review blockquote {
+  .detail-country__review blockquote {
     //margin: 0;
   }
 
-  .country2__review h4 {
+  .detail-country__review h4 {
     //position: relative;
     //margin: 0 0 20px;
     //padding: 0 0 13px;
@@ -284,7 +283,7 @@
     }
   }
 
-  .country2__review-quote {
+  .detail-country__review-quote {
     //margin: 0 0 31px;
     //font-style: normal;
     //font-weight: normal;
@@ -294,13 +293,13 @@
     //color: $color_dark_70;
   }
 
-  .country2__review-cite {
+  .detail-country__review-cite {
     //display: flex;
     //align-items: center;
     //margin: 0;
   }
 
-  .country2__review-cite img {
+  .detail-country__review-cite img {
     //display: block;
     //margin: 0 16px 0 0;
     //width: 38px;
@@ -309,7 +308,7 @@
     //overflow: hidden;
   }
 
-  .country2__review-cite cite {
+  .detail-country__review-cite cite {
     //display: block;
     //margin: 5px 0 0;
     //font-family: "Poppins", "Arial", sans-serif;
