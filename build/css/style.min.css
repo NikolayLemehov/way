@@ -1487,16 +1487,22 @@ input[type="radio"].visually-hidden {
   line-height: 24px;
   letter-spacing: 1.6px;
   text-decoration: none;
-  color: rgba(44, 46, 63, 0.3); }
+  color: rgba(44, 46, 63, 0.3);
+  -webkit-transition: color 0.3s ease-in;
+  transition: color 0.3s ease-in; }
+  .country__bookmark-item a:hover {
+    color: rgba(44, 46, 63, 0.7); }
 
-.country__bookmark-item--active a {
-  color: #fe7865; }
+.country__bookmark-item--active a,
+.country__bookmark-item--active a:hover {
+  color: #fe7865;
+  cursor: default; }
 
 .country__description-list {
   list-style: none;
   width: 100%;
   margin: 0;
-  padding: 79px 0 0; }
+  padding: 39px 0 0; }
   .country__description-list::before {
     content: "";
     position: absolute;
@@ -1504,15 +1510,19 @@ input[type="radio"].visually-hidden {
     right: 0;
     top: auto;
     width: 100vw;
-    height: 1089px;
+    height: calc(1089px + 40px);
     margin-top: 23px;
-    background: url("../img/europe-map.svg") no-repeat center 0;
+    background: url("../img/europe-map.svg") no-repeat center 40px;
     background-size: 1444px 1089px; }
 
 .country__description-item {
-  display: none; }
+  display: none;
+  padding: 40px 0 0; }
   .country__description-item--active {
     display: block; }
+
+.country--nojs .country__description-item {
+  display: block; }
 
 @media (max-width: 1239px) {
   .country__inner {
@@ -1555,9 +1565,11 @@ input[type="radio"].visually-hidden {
     .country__bookmark-item:last-child {
       padding: 0 39px 0 0; }
   .country__description-list {
-    padding: 33px 0 0; }
+    padding: 3px 0 0; }
     .country__description-list::before {
-      content: none; } }
+      content: none; }
+  .country__description-item {
+    padding: 30px 0 0; } }
 
 @media (max-width: 767px) {
   .country__inner {
@@ -1566,6 +1578,8 @@ input[type="radio"].visually-hidden {
     width: calc(100% - 15px);
     margin: 0 0 0 15px; }
   .country__description-list {
-    padding: 25px 0 0; } }
+    padding: 5px 0 0; }
+  .country__description-item {
+    padding: 20px 0 0; } }
 
 /*# sourceMappingURL=style.min.css.map */

@@ -30,38 +30,51 @@
   letter-spacing: 1.6px;
   text-decoration: none;
   color: $color_dark_30;
+  transition: color $transition;
+
+  &:hover {
+    color: $color_dark_70;
+  }
 }
 
-.country__bookmark-item--active a {
+.country__bookmark-item--active a,
+.country__bookmark-item--active a:hover {
   color: $color_accent_basic;
+  cursor: default;
 }
 
 .country__description-list {
   list-style: none;
   width: 100%;
   margin: 0;
-  padding: 79px 0 0;
+  padding: 39px 0 0;
 
   &::before {
+    $diff: 40px;
     content: "";
     position: absolute;
     z-index: -1;
     right: 0;
     top: auto;
     width: 100vw;
-    height: 1089px;
+    height: calc(1089px + #{$diff});
     margin-top: 23px;
-    background: url("#{$prefix_css_img}europe-map.svg") no-repeat center 0;
+    background: url("#{$prefix_css_img}europe-map.svg") no-repeat center $diff;
     background-size: 1444px 1089px;
   }
 }
 
 .country__description-item {
   display: none;
+  padding: 40px 0 0;
 
   &--active {
     display: block;
   }
+}
+
+.country--nojs .country__description-item {
+  display: block;
 }
 
 @media (max-width: $desktop_container_width - 1) {
@@ -114,11 +127,15 @@
   }
 
   .country__description-list {
-    padding: 33px 0 0;
+    padding: 3px 0 0;
 
     &::before {
       content: none;
     }
+  }
+
+  .country__description-item {
+    padding: 30px 0 0;
   }
 }
 
@@ -133,6 +150,10 @@
   }
 
   .country__description-list {
-    padding: 25px 0 0;
+    padding: 5px 0 0;
+  }
+
+  .country__description-item {
+    padding: 20px 0 0;
   }
 }
