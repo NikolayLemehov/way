@@ -1193,11 +1193,37 @@ input[type="radio"].visually-hidden {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  min-height: 600px;
+  min-height: 600px; }
+
+.country__description-item--greece {
   background: url("../img/visit-tab-greece-desktop@1x.jpg") no-repeat calc(50% + 100px) 0; }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    .detail-country {
+    .country__description-item--greece {
       background-image: url("../img/visit-tab-greece-desktop@2x.jpg"); } }
+
+.country__description-item--albania {
+  background: url("../img/visit-tab-albania-desktop@1x.jpg") no-repeat calc(50% + 100px) 0; }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .country__description-item--albania {
+      background-image: url("../img/visit-tab-albania-desktop@2x.jpg"); } }
+
+.country__description-item--macedonia {
+  background: url("../img/visit-tab-macedonia-desktop@1x.jpg") no-repeat calc(50% + 100px) 0; }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .country__description-item--macedonia {
+      background-image: url("../img/visit-tab-macedonia-desktop@2x.jpg"); } }
+
+.country__description-item--montenegro {
+  background: url("../img/visit-tab-montenegro-desktop@1x.jpg") no-repeat calc(50% + 100px) 0; }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .country__description-item--montenegro {
+      background-image: url("../img/visit-tab-montenegro-desktop@2x.jpg"); } }
+
+.country__description-item--croatia {
+  background: url("../img/visit-tab-croatia-desktop@1x.jpg") no-repeat calc(50% + 100px) 0; }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .country__description-item--croatia {
+      background-image: url("../img/visit-tab-croatia-desktop@2x.jpg"); } }
 
 .detail-country__description {
   width: 384px;
