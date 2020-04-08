@@ -1,0 +1,323 @@
+.country2 {
+  display: flex;
+  //display: none;
+  justify-content: space-between;
+  min-height: 600px;
+  background: url("#{$prefix_css_img}visit-tab-greece-desktop@1x.jpg") no-repeat calc(50% + 100px) 0;
+
+  @include bg-retina("visit-tab-greece-desktop@2x.jpg");
+}
+
+.country2__description {
+  width: 384px;
+  padding: 11px 0 0;
+}
+
+.country2__description h3 {
+  position: relative;
+  margin: 0 0 32px;
+  padding: 0 0 16px 1px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 55px;
+  line-height: 90px;
+  letter-spacing: 2px;
+  color: $color_dark;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 175px;
+    height: 3px;
+    background-color: $color_accent_basic;
+  }
+}
+
+.country2__description p {
+  margin: 0 0 48px;
+  padding: 0 0 0 1px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0.6px;
+  color: $color_dark_70;
+}
+
+.country2__description a {
+  display: block;
+  width: 250px;
+  margin: 0;
+  padding: 30px 15px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  color: $color_white;
+  background-color: $color_accent_basic;
+  transition: opacity $transition, background-color $transition;
+
+  &:hover {
+    background-color: $color_hover_accent;
+  }
+
+  &:active {
+    background-color: $color_hover_accent;
+    opacity: 0.6;
+  }
+}
+
+.country2__review {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  width: 382px;
+}
+
+.country2__review-container {
+  margin: 114px 0 0;
+  padding: 30px 25px 30px 31px;
+  background-color: $color_white;
+}
+
+.country2__review blockquote {
+  margin: 0;
+}
+
+.country2__review h4 {
+  position: relative;
+  margin: 0 0 20px;
+  padding: 0 0 13px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 37px;
+  letter-spacing: 1.5px;
+  color: $color_dark;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 68px;
+    height: 1px;
+    background-color: $color_accent_basic;
+  }
+}
+
+.country2__review-quote {
+  margin: 0 0 31px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 28px;
+  letter-spacing: 0.5px;
+  color: $color_dark_70;
+}
+
+.country2__review-cite {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.country2__review-cite img {
+  display: block;
+  margin: 0 16px 0 0;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.country2__review-cite cite {
+  display: block;
+  margin: 5px 0 0;
+  font-family: "Poppins", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.1px;
+  color: $color_dark;
+}
+
+@media (max-width: $desktop_container_width - 1) {
+  $max_view: $desktop_container_width;
+  $min_view: $desktop_width;
+
+  .country2 {
+    $max_bg_p_diff: 100px;
+    $min_bg_p_diff: 135px;
+    $rate: ($max_bg_p_diff - $min_bg_p_diff) / ($max_view - $min_view);
+    $bg_p_diff: "calc((100vw - #{$min_view}) * #{$rate} + #{$min_bg_p_diff})";
+    background-position: calc(50% + #{$bg_p_diff}) 0;
+  }
+}
+
+@media (max-width: $desktop_width - 1) {
+  .country2 {
+    flex-direction: column;
+    align-items: center;
+    background: none;
+  }
+
+  .country2__description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    //width: 384px;
+    width: auto;
+    //padding: 11px 0 0;
+    text-align: center;
+  }
+
+  .country2__description h3 {
+    //position: relative;
+    //margin: 0 0 32px;
+    //padding: 0 0 16px 1px;
+    //font-style: normal;
+    //font-weight: 600;
+    font-size: 30px;
+    line-height: 150%;
+    //letter-spacing: 2px;
+    //color: $color_dark;
+    //
+    &::after {
+      content: none;
+      //position: absolute;
+      //left: 0;
+      //bottom: 0;
+      //width: 175px;
+      //height: 3px;
+      //background-color: $color_accent_basic;
+    }
+  }
+
+  .country2__description p {
+    //margin: 0 0 48px;
+    //padding: 0 0 0 1px;
+    //font-style: normal;
+    //font-weight: normal;
+    //font-size: 16px;
+    //line-height: 28px;
+    //letter-spacing: 0.6px;
+    //color: $color_dark_70;
+  }
+
+  .country2__description a {
+    //display: block;
+    //width: 250px;
+    //margin: 0;
+    //padding: 30px 15px;
+    //font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+    //letter-spacing: 2.5px;
+    //text-transform: uppercase;
+    //text-decoration: none;
+    //text-align: center;
+    //color: $color_white;
+    //background-color: $color_accent_basic;
+  }
+
+  .country2__review {
+    //display: flex;
+    //justify-content: flex-end;
+    //align-items: flex-start;
+    width: auto;
+    min-height: 415px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      right: 0;
+      top: auto;
+      width: 100vw;
+      height: 415px;
+      background: url("#{$prefix_css_img}visit-tab-greece-tablet@1x.jpg") no-repeat center;
+
+      @include bg-retina("visit-tab-greece-tablet@2x.jpg");
+      background-size: cover;
+    }
+  }
+
+  .country2__review-container {
+    width: 382px;
+    margin: 50px 0 0;
+    //padding: 30px 25px 30px 31px;
+    //background-color: $color_white;
+  }
+
+  .country2__review blockquote {
+    //margin: 0;
+  }
+
+  .country2__review h4 {
+    //position: relative;
+    //margin: 0 0 20px;
+    //padding: 0 0 13px;
+    //font-style: normal;
+    //font-weight: 500;
+    //font-size: 30px;
+    //line-height: 37px;
+    //letter-spacing: 1.5px;
+    //color: $color_dark;
+
+    &::after {
+      //content: "";
+      //position: absolute;
+      //left: 0;
+      //bottom: 0;
+      //width: 68px;
+      //height: 1px;
+      //background-color: $color_accent_basic;
+    }
+  }
+
+  .country2__review-quote {
+    //margin: 0 0 31px;
+    //font-style: normal;
+    //font-weight: normal;
+    //font-size: 14px;
+    //line-height: 28px;
+    //letter-spacing: 0.5px;
+    //color: $color_dark_70;
+  }
+
+  .country2__review-cite {
+    //display: flex;
+    //align-items: center;
+    //margin: 0;
+  }
+
+  .country2__review-cite img {
+    //display: block;
+    //margin: 0 16px 0 0;
+    //width: 38px;
+    //height: 38px;
+    //border-radius: 50%;
+    //overflow: hidden;
+  }
+
+  .country2__review-cite cite {
+    //display: block;
+    //margin: 5px 0 0;
+    //font-family: "Poppins", "Arial", sans-serif;
+    //font-style: normal;
+    //font-weight: 500;
+    //font-size: 16px;
+    //line-height: 24px;
+    //letter-spacing: -0.1px;
+    //color: $color_dark;
+  }
+}

@@ -8,7 +8,7 @@
   align-items: flex-start;
   width: $desktop_container_width - 20px;
   margin: 0 auto;
-  padding: 199px 25px 60px;
+  padding: 199px 25px 30px;
 }
 
 .visit-place__inner h2 {
@@ -60,11 +60,11 @@
   margin: 0 0 101px;
 
   &:nth-child(4) {
-    margin: 0 0 98px 175px;
+    margin: 0 0 20px 175px;
   }
 
   &:nth-child(5) {
-    margin: 0 175px 98px 0;
+    margin: 0 175px 20px 0;
   }
 }
 
@@ -163,59 +163,6 @@
   background-color: $color_white;
 }
 
-.visit-place__bookmark-list {
-  list-style: none;
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  width: 904px;
-  margin: 0;
-  padding: 0 0 14px;
-  border-bottom: 1px solid $color_dark_30;
-}
-
-.visit-place__bookmark-item a {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 24px;
-  letter-spacing: 1.6px;
-  text-decoration: none;
-  color: $color_dark_30;
-}
-
-.visit-place__bookmark-item--active a {
-  color: $color_accent_basic;
-}
-
-.visit-place__description-list {
-  list-style: none;
-  width: 100%;
-  margin: 0;
-  padding: 79px 0 0;
-
-  &::before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    right: 0;
-    top: auto;
-    width: 100vw;
-    height: 1089px;
-    margin-top: 23px;
-    background: url("#{$prefix_css_img}europe-map.svg") no-repeat center 0;
-    background-size: 1444px 1089px;
-  }
-}
-
-.visit-place__description-item {
-  display: none;
-
-  &--active {
-    display: block;
-  }
-}
-
 @media (max-width: $desktop_container_width - 1) {
   $max_view: $desktop_container_width;
   $min_view: $desktop_width;
@@ -245,5 +192,119 @@
     $rate: ($max_width - $min_width) / ($max_view - $min_view);
     $width: "calc((100vw - #{$min_view}) * #{$rate} + #{$min_width})";
     width: #{$width};
+  }
+}
+
+@media (max-width: $desktop_width - 1) {
+  .visit-place__inner {
+    align-items: center;
+    padding: 80px 25px 60px;
+  }
+
+  .visit-place__inner h2 {
+    width: auto;
+    margin: 0 0 21px;
+    padding: 0;
+    font-size: 30px;
+    line-height: 150%;
+    letter-spacing: 1.9px;
+    text-align: center;
+
+    &::after {
+      content: none;
+    }
+  }
+
+  .visit-place__inner > p {
+    margin: 0 0 39px;
+    text-align: center;
+  }
+
+  .visit-place__image-list {
+    justify-content: center;
+  }
+
+  .visit-place__image-list li {
+    $mb: 20px;
+    display: flex;
+    justify-content: center;
+    width: 318px;
+    margin-bottom: $mb;
+    margin-left: 0;
+    margin-right: 0;
+
+    &:nth-child(4) {
+      margin: 0 0 calc(#{$mb} + 10px) 0;
+    }
+
+    &:nth-child(5) {
+      margin: 0 0 $mb 0;
+    }
+  }
+
+  .visit-place__image-link {
+    width: 288px;
+    height: 425px;
+
+    &--greece {
+      background-image: url("#{$prefix_css_img}visit-greece-tablet@1x.jpg");
+
+      @include bg-retina("visit-greece-tablet@2x.jpg");
+      background-size: cover;
+    }
+
+    &--albania {
+      background-image: url("#{$prefix_css_img}visit-albania-tablet@1x.jpg");
+
+      @include bg-retina("visit-albania-tablet@2x.jpg");
+      background-size: cover;
+    }
+
+    &--macedonia {
+      background-image: url("#{$prefix_css_img}visit-macedonia-tablet@1x.jpg");
+
+      @include bg-retina("visit-macedonia-tablet@2x.jpg");
+      background-size: cover;
+    }
+
+    &--montenegro {
+      background-image: url("#{$prefix_css_img}visit-montenegro-tablet@1x.jpg");
+
+      @include bg-retina("visit-montenegro-tablet@2x.jpg");
+      background-size: cover;
+    }
+
+    &--croatia {
+      background-image: url("#{$prefix_css_img}visit-croatia-tablet@1x.jpg");
+
+      @include bg-retina("visit-croatia-tablet@2x.jpg");
+      background-size: cover;
+    }
+  }
+}
+
+@media (max-width: $tablet_width - 1) {
+  .visit-place__inner {
+    padding: 49px 0 60px;
+  }
+
+  .visit-place__inner h2 {
+    font-size: 24px;
+    line-height: 150%;
+    letter-spacing: 1.4px;
+  }
+
+  .visit-place__inner > p {
+    width: auto;
+    margin: 0 0 18px;
+  }
+
+  .visit-place__image-list li {
+    margin: 0 0 35px;
+
+    &:nth-child(4),
+    &:nth-child(5) {
+      margin: 0 0 35px;
+    }
   }
 }
