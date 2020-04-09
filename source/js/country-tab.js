@@ -5,7 +5,6 @@ export default class CountryTab {
     this.isActive = null;
     this.country = null;
     this.descriptionItem = null;
-    this.haveFocus = null;
     this.isAllExisting = this._active();
   }
 

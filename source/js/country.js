@@ -8,6 +8,7 @@ export default class Country {
     this.isAllExisting = this.element && this.bookmarkList && this.bookmarkItems.length > 0;
     this.countryTabs = null;
     this.currentTab = null;
+    this.focusedTab = null;
   }
 
   active() {
@@ -47,7 +48,6 @@ export default class Country {
         this.bookmarkList.classList.remove(`country__bookmark-list--focus`);
       });
     });
-
   }
 
   _onViewChange() {
