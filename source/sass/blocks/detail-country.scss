@@ -2,9 +2,7 @@
   display: flex;
   justify-content: space-between;
   min-height: 600px;
-}
 
-.country__description-item {
   &--greece {
     background: url("#{$prefix_css_img}visit-tab-greece-desktop@1x.jpg") no-repeat calc(50% + 100px) 0;
 
