@@ -94,7 +94,7 @@
     position: relative;
     align-self: flex-start;
     width: calc(100% - 39px);
-    min-height: 38px;
+    min-height: 41px;
     margin: 0 0 0 39px;
     overflow: hidden;
 
@@ -116,6 +116,40 @@
     padding: 0;
     border-bottom: none;
     overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: transparent;
+      border-radius: 4px;
+      border: 5px solid transparent;
+    }
+
+    &:hover {
+      -ms-overflow-style: scrollbar;
+      overflow: -moz-scrollbars-none;
+      scrollbar-width: auto;
+
+      &::-webkit-scrollbar {
+        width: 0;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: $color_black_10;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: $color_dark_30;
+      }
+    }
   }
 
   .country__bookmark-item {
@@ -127,7 +161,7 @@
   }
 
   .country__description-list {
-    padding: 3px 0 0;
+    padding: 0;
 
     &::before {
       content: none;

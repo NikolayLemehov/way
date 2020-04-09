@@ -10,14 +10,12 @@ export default class CountryTab {
 
   uncheck() {
     this.bookmarkItem.classList.remove(`country__bookmark-item--active`);
-    this.tab.removeAttribute(`tabindex`);
     this.descriptionItem.classList.remove(`country__description-item--active`);
     this.isActive = false;
   }
 
   check() {
     this.bookmarkItem.classList.add(`country__bookmark-item--active`);
-    this.tab.tabIndex = `-1`;
     this.descriptionItem.classList.add(`country__description-item--active`);
     this.isActive = true;
   }
