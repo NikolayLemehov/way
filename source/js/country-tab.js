@@ -5,6 +5,7 @@ export default class CountryTab {
     this.isActive = null;
     this.country = null;
     this.descriptionItem = null;
+    this.haveFocus = null;
     this.isAllExisting = this._active();
   }
 
@@ -18,6 +19,14 @@ export default class CountryTab {
     this.bookmarkItem.classList.add(`country__bookmark-item--active`);
     this.descriptionItem.classList.add(`country__description-item--active`);
     this.isActive = true;
+  }
+
+  setFocusTabHandler(handler) {
+    this.tab.addEventListener(`focus`, handler);
+  }
+
+  setBlurTabHandler(handler) {
+    this.tab.addEventListener(`blur`, handler);
   }
 
   _active() {

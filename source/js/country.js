@@ -3,8 +3,9 @@ import CountryTab from './country-tab';
 export default class Country {
   constructor(element) {
     this.element = element;
-    this.bookmarkItems = element.querySelectorAll(`.country__bookmark-item`);
-    this.isAllExisting = !!this.element && this.bookmarkItems.length > 0;
+    this.bookmarkList = element ? element.querySelector(`.country__bookmark-list`) : null;
+    this.bookmarkItems = element ? element.querySelectorAll(`.country__bookmark-item`) : null;
+    this.isAllExisting = this.element && this.bookmarkList && this.bookmarkItems.length > 0;
     this.countryTabs = null;
     this.currentTab = null;
   }
@@ -22,6 +23,7 @@ export default class Country {
     if (this.element.classList.contains(`country--nojs`)) {
       this.element.classList.remove(`country--nojs`);
     }
+
     this._onViewChange();
     this.countryTabs[0].check();
     this.currentTab = this.countryTabs[0];
@@ -36,6 +38,13 @@ export default class Country {
         oldTab.uncheck();
         this.currentTab = it;
         it.check();
+      });
+
+      it.setFocusTabHandler(() => {
+        this.bookmarkList.classList.add(`country__bookmark-list--focus`);
+      });
+      it.setBlurTabHandler(() => {
+        this.bookmarkList.classList.remove(`country__bookmark-list--focus`);
       });
     });
 

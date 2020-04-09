@@ -133,7 +133,8 @@
       border: 5px solid transparent;
     }
 
-    &:hover {
+    &:hover,
+    &--focus& {
       -ms-overflow-style: scrollbar;
       overflow: -moz-scrollbars-none;
       scrollbar-width: auto;
