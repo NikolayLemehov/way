@@ -1,0 +1,26 @@
+.prices ul {
+  list-style: none;
+  width: $desktop_container_width;
+  margin: 0;
+  padding: 0;
+}
+
+.prices h2 {
+  margin: 0;
+}
+
+.prices__item--intro p {
+  margin: 0;
+}
+
+.prices__item--intro b {
+  margin: 0;
+}
+
+.prices__item--intro a {
+  display: block;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+

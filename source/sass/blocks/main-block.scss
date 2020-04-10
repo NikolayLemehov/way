@@ -9,7 +9,8 @@
 .main-block__inner {
   width: $desktop_container_width - 20px;
   margin: 0 auto;
-  padding: 185px 76px 297px 713px;
+  //padding: 185px 76px 297px 713px;
+  padding: 185px 76px 297px 724px;
 }
 
 .main-block__inner h1 {
@@ -74,7 +75,7 @@
   $min_view: $desktop_width;
 
   .main-block__inner {
-    $max_pl: 713px;
+    $max_pl: 724px;
     $min_pl: 537px;
     $rate: ($max_pl - $min_pl) / ($max_view - $min_view);
     width: calc(100vw - 20px);
