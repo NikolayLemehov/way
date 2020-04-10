@@ -79,9 +79,9 @@
   background-repeat: no-repeat;
   background-position: center 0;
   background-color: $color_dark;
+  transition: background-color $transition;
 
-  &:hover::before,
-  &:focus::before {
+  &::before {
     content: "";
     position: absolute;
     z-index: 1;
@@ -89,6 +89,12 @@
     top: 0;
     width: 100%;
     height: 100%;
+    background-color: transparent;
+    transition: background-color $transition;
+  }
+
+  &:hover::before,
+  &:focus::before {
     background-color: $color_darkest_darkest_60;
   }
 }
@@ -106,7 +112,7 @@
 
 .visit-place__pseudo-button {
   position: relative;
-  display: none;
+  display: block;
   width: 266px;
   min-height: 77px;
   margin: 160px 0 0;
@@ -120,10 +126,12 @@
   text-transform: uppercase;
   color: $color_white;
   border: 1px solid $color_white_70;
+  opacity: 0;
+  transition: opacity $transition;
 
   .visit-place__image-link:hover &,
   .visit-place__image-link:focus & {
-    display: block;
+    opacity: 1;
   }
 }
 
