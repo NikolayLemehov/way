@@ -2,33 +2,36 @@
   display: flex;
   justify-content: space-between;
   min-height: 600px;
+  background-size: 430px 596px;
+  background-repeat: no-repeat;
+  background-position: calc(50% + 100px);
 
   &--greece {
-    background: url("#{$prefix_css_img}visit-tab-greece-desktop@1x.jpg") no-repeat calc(50% + 100px) 0;
+    background-image: url("#{$prefix_css_img}visit-tab-greece-desktop@1x.jpg");
 
     @include bg-retina("visit-tab-greece-desktop@2x.jpg");
   }
 
   &--albania {
-    background: url("#{$prefix_css_img}visit-tab-albania-desktop@1x.jpg") no-repeat calc(50% + 100px) 0;
+    background-image: url("#{$prefix_css_img}visit-tab-albania-desktop@1x.jpg");
 
     @include bg-retina("visit-tab-albania-desktop@2x.jpg");
   }
 
   &--macedonia {
-    background: url("#{$prefix_css_img}visit-tab-macedonia-desktop@1x.jpg") no-repeat calc(50% + 100px) 0;
+    background-image: url("#{$prefix_css_img}visit-tab-macedonia-desktop@1x.jpg");
 
     @include bg-retina("visit-tab-macedonia-desktop@2x.jpg");
   }
 
   &--montenegro {
-    background: url("#{$prefix_css_img}visit-tab-montenegro-desktop@1x.jpg") no-repeat calc(50% + 100px) 0;
+    background-image: url("#{$prefix_css_img}visit-tab-montenegro-desktop@1x.jpg");
 
     @include bg-retina("visit-tab-montenegro-desktop@2x.jpg");
   }
 
   &--croatia {
-    background: url("#{$prefix_css_img}visit-tab-croatia-desktop@1x.jpg") no-repeat calc(50% + 100px) 0;
+    background-image: url("#{$prefix_css_img}visit-tab-croatia-desktop@1x.jpg");
 
     @include bg-retina("visit-tab-croatia-desktop@2x.jpg");
   }
