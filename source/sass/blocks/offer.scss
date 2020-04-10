@@ -24,9 +24,6 @@
   font-weight: normal;
   font-size: 16px;
   line-height: 24px;
-  /* or 150% */
-
-
   color: $color_dark;
 }
 
@@ -36,12 +33,24 @@
   padding: 0;
 }
 
-//.offer li {
-//}
+.offer li {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 32px;
+  color: $color_dark;
+}
 
 .offer a {
   display: block;
   margin: 0;
   padding: 0;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
   text-decoration: none;
+  color: $color_white;
 }
