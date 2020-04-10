@@ -1,11 +1,13 @@
 import CountryTab from './country-tab';
+import {BETWEEN_ANIMATION_TIME} from './utils';
 
 export default class Country {
   constructor(element) {
     this.element = element;
     this.bookmarkList = element ? element.querySelector(`.country__bookmark-list`) : null;
     this.bookmarkItems = element ? element.querySelectorAll(`.country__bookmark-item`) : null;
-    this.isAllExisting = this.element && this.bookmarkList && this.bookmarkItems.length > 0;
+    this.descriptionList = element ? element.querySelector(`.country__description-list`) : null;
+    this.isAllExisting = this.element && this.bookmarkList && this.descriptionList && this.bookmarkItems.length > 0;
     this.countryTabs = null;
     this.currentTab = null;
   }
@@ -35,9 +37,12 @@ export default class Country {
           return;
         }
         const oldTab = this.currentTab;
-        oldTab.uncheck();
         this.currentTab = it;
-        it.check();
+
+        oldTab.uncheckAnimated();
+        oldTab.descriptionItem.addEventListener(`transitionend`, () => {
+          setTimeout(this.currentTab.checkAnimated(), BETWEEN_ANIMATION_TIME);
+        });
       });
 
       it.setFocusTabHandler(() => {

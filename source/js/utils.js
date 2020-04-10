@@ -1,3 +1,5 @@
+const BETWEEN_ANIMATION_TIME = 50; // ms
+
 const activeForEeachNodeListForIE = () => {
   if (typeof NodeList.prototype.forEach !== `function`) {
     NodeList.prototype.forEach = Array.prototype.forEach;
@@ -21,4 +23,4 @@ const getScrollbarWidth = () => {
   return scrollbarWidth;
 };
 
-export {activeForEeachNodeListForIE, getScrollbarWidth};
+export {activeForEeachNodeListForIE, getScrollbarWidth, BETWEEN_ANIMATION_TIME};

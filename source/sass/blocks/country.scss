@@ -66,10 +66,17 @@
 
 .country__description-item {
   display: none;
+  width: 100%;
   padding: 40px 0 0;
+  opacity: 0;
+  transition: opacity $transition_tab;
 
-  &--active {
+  &--display {
     display: block;
+  }
+
+  &--opacity {
+    opacity: 1;
   }
 }
 
@@ -183,7 +190,7 @@
   }
 
   .country__description-list {
-    padding: 5px 0 0;
+    padding: 2px 0 0;
   }
 
   .country__description-item {
