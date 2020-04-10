@@ -1,4 +1,4 @@
-import {getScrollbarWidth} from './utils';
+import {BREAK_POINT_DESKTOP, getScrollbarWidth} from './utils';
 import {debounce} from './debounce';
 
 const KEY_CODE_ESC = 27;
@@ -43,9 +43,10 @@ export default class PageHeader {
     };
     const debounceDelAttribute = debounce(delAttribute, DELAY_DEL_ATTRIBUTE);
     window.addEventListener(`resize`, () => {
-      if (this.element.classList.contains(`page-header--close`)) {
-        this.menu.style.display = `none`;
+      if (!this.element.classList.contains(`page-header--close`) || window.innerWidth >= BREAK_POINT_DESKTOP) {
+        return;
       }
+      this.menu.style.display = `none`;
       debounceDelAttribute();
     });
   }
