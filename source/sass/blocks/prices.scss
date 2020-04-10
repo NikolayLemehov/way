@@ -7,20 +7,40 @@
 
 .prices h2 {
   margin: 0;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 55px;
+  line-height: 90px;
+  color: $color_dark;
 }
 
 .prices__item--intro p {
   margin: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 170%;
+  color: $color_dark_70;
 }
 
 .prices__item--intro b {
   margin: 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 34px;
+  color: $color_darkest_darkest;
 }
 
 .prices__item--intro a {
   display: block;
   margin: 0;
   padding: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 32px;
   text-decoration: none;
+  color: $color_black;
 }
 

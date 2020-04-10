@@ -1,13 +1,33 @@
 .offer h3 {
   margin: 0;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 38px;
+  letter-spacing: 1.2px;
+  color: $color_darkest_darkest_70;
 }
 
 .offer__price {
   margin: 0;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 34px;
+  text-align: right;
+  color: $color_darkest_darkest_70;
 }
 
 .offer__check-out {
   margin: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  /* or 150% */
+
+
+  color: $color_dark;
 }
 
 .offer ul {
