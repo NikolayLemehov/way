@@ -135,10 +135,20 @@
     padding: 0;
     background-color: transparent;
     border: none;
+    transition: background-color $transition, opacity $transition;
 
     .page-header--close & {
       padding: 10px 21px;
       background-color: $color_accent_basic;
+    }
+
+    .page-header--close &:hover {
+      background-color: $color_hover_accent;
+    }
+
+    .page-header--close &:active {
+      background-color: $color_hover_accent;
+      opacity: 0.6;
     }
   }
 

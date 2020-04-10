@@ -9,7 +9,7 @@ export default class PageHeader {
     this.element = element;
     this.btn = element ? element.querySelector(`.page-header__menu > button`) : null;
     this.menu = element ? element.querySelector(`.page-header__menu ul`) : null;
-    this.menuItems = element ? element.querySelectorAll(`.page-header__menu .scroll-to`) : null;
+    this.menuItems = element ? element.querySelectorAll(`.page-header__menu .js-trigger`) : null;
     this.isAllExisting = element && this.btn && this.menu && this.menuItems.length > 0;
 
     this._onDocumentMenuEscKeyDown = this._onDocumentMenuEscKeyDown.bind(this);
