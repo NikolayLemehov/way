@@ -2,34 +2,19 @@
   display: flex;
   justify-content: space-between;
   min-height: 600px;
-  background-size: 430px 596px;
-  background-repeat: no-repeat;
-  background-position: calc(50% + 100px);
+}
 
-  &--greece {
-    @include bg-retina("visit-tab-greece-desktop@2x.jpg");
-    background-image: url("#{$prefix_css_img}visit-tab-greece-desktop@1x.jpg");
-  }
+.detail-country__img {
+  position: absolute;
+  z-index: -1;
+  left: calc(50% - 116px);
+  top: auto;
+  margin-top: 2px;
+}
 
-  &--albania {
-    @include bg-retina("visit-tab-albania-desktop@2x.jpg");
-    background-image: url("#{$prefix_css_img}visit-tab-albania-desktop@1x.jpg");
-  }
-
-  &--macedonia {
-    @include bg-retina("visit-tab-macedonia-desktop@2x.jpg");
-    background-image: url("#{$prefix_css_img}visit-tab-macedonia-desktop@1x.jpg");
-  }
-
-  &--montenegro {
-    @include bg-retina("visit-tab-montenegro-desktop@2x.jpg");
-    background-image: url("#{$prefix_css_img}visit-tab-montenegro-desktop@1x.jpg");
-  }
-
-  &--croatia {
-    @include bg-retina("visit-tab-croatia-desktop@2x.jpg");
-    background-image: url("#{$prefix_css_img}visit-tab-croatia-desktop@1x.jpg");
-  }
+.detail-country__img picture,
+.detail-country__img img {
+  display: block;
 }
 
 .detail-country__description {
@@ -177,12 +162,12 @@
   $max_view: $desktop_container_width;
   $min_view: $desktop_width;
 
-  .detail-country {
-    $max_bg_p_diff: 100px;
-    $min_bg_p_diff: 135px;
-    $rate: ($max_bg_p_diff - $min_bg_p_diff) / ($max_view - $min_view);
-    $bg_p_diff: "calc((100vw - #{$min_view}) * #{$rate} + #{$min_bg_p_diff})";
-    background-position: calc(50% + #{$bg_p_diff}) 0;
+  .detail-country__img {
+    $max_left_diff: 116px;
+    $min_left_diff: 50px;
+    $rate: ($max_left_diff - $min_left_diff) / ($max_view - $min_view);
+    $left_diff: "calc((100vw - #{$min_view}) * #{$rate} + #{$min_left_diff})";
+    left: calc(50% - #{$left_diff});
   }
 }
 
@@ -226,25 +211,32 @@
   }
 
   .detail-country__review {
+    position: relative;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    width: auto;
+    width: 100%;
     min-height: 415px;
+  }
 
-    &::after {
-      content: "";
-      position: absolute;
-      z-index: -1;
-      right: 0;
-      top: auto;
-      width: 100vw;
-      height: 415px;
-      background: url("#{$prefix_css_img}visit-tab-greece-tablet@1x.jpg") no-repeat center;
+  .detail-country__img {
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 415px;
+    margin: 0;
+  }
 
-      @include bg-retina("visit-tab-greece-tablet@2x.jpg");
-      background-size: cover;
-    }
+  .detail-country__img picture {
+    width: 100%;
+    height: 100%;
+  }
+
+  .detail-country__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
   }
 
   .detail-country__review-container {
@@ -269,13 +261,6 @@
 
   .detail-country__description a {
     width: 288px;
-  }
-
-  .detail-country__review::after {
-    background: url("#{$prefix_css_img}visit-tab-greece-mobile@1x.jpg") no-repeat center;
-
-    @include bg-retina("visit-tab-greece-mobile@2x.jpg");
-    background-size: cover;
   }
 
   .detail-country__review-container {
