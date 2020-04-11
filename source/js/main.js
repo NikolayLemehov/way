@@ -1,11 +1,14 @@
-import {activeForEeachNodeListForIE} from './utils';
 import PageHeader from './page-header';
+import VisitPlace from './visit-place';
 import Country from './country';
+import {activeForEeachNodeListForIE} from './utils';
 
 activeForEeachNodeListForIE();
 const pageHeader = new PageHeader(document.querySelector(`.page-header`));
-pageHeader.active();
+const visitPlace = new VisitPlace(document.querySelector(`.visit-place`));
 const country = new Country(document.querySelector(`.country`));
+pageHeader.active();
+visitPlace.active(country);
 country.active();
 
 const moveTo = new window.MoveTo();

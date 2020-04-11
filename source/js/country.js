@@ -33,16 +33,7 @@ export default class Country {
     this.countryTabs.forEach((it) => {
       it.tab.addEventListener(`click`, (evt) => {
         evt.preventDefault();
-        if (it.bookmarkItem.classList.contains(`country__bookmark-item--active`)) {
-          return;
-        }
-        const oldTab = this.currentTab;
-        this.currentTab = it;
-
-        oldTab.uncheckAnimated();
-        oldTab.descriptionItem.addEventListener(`transitionend`, () => {
-          setTimeout(this.currentTab.checkAnimated(), BETWEEN_ANIMATION_TIME);
-        });
+        this._replaceTab(it);
       });
 
       it.setFocusTabHandler(() => {
@@ -51,6 +42,24 @@ export default class Country {
       it.setBlurTabHandler(() => {
         this.bookmarkList.classList.remove(`country__bookmark-list--focus`);
       });
+    });
+  }
+
+  checkTab(countryName) {
+    const newTab = Array.from(this.countryTabs).find((it) => it.country === countryName);
+    this._replaceTab(newTab);
+  }
+
+  _replaceTab(newTab) {
+    if (newTab.bookmarkItem.classList.contains(`country__bookmark-item--active`)) {
+      return;
+    }
+    const oldTab = this.currentTab;
+    this.currentTab = newTab;
+
+    oldTab.uncheckAnimated();
+    oldTab.descriptionItem.addEventListener(`transitionend`, () => {
+      setTimeout(this.currentTab.checkAnimated(), BETWEEN_ANIMATION_TIME);
     });
   }
 
