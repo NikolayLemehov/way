@@ -1,3 +1,32 @@
+.offer {
+  display: flex;
+  flex-direction: column;
+  min-height: 672px;
+  padding: 40px 30px 30px;
+  background: $color_white;
+  border-radius: 6px;
+  box-shadow: inset 0 0 0 0.5px $color_dark_30, 0 0 0 0.5px $color_dark_30;
+  transition: box-shadow $transition;
+
+  &:hover {
+    box-shadow: inset 0 0 0 1.5px $color_accent_basic, 0 0 0 1.5px $color_accent_basic;
+    border-radius: 6px;
+  }
+}
+
+.offer__title-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 0 37px;
+  color: $color_darkest_darkest_70;
+  transition: color $transition;
+
+  .offer:hover & {
+    color: $color_accent_basic;
+  }
+}
+
 .offer h3 {
   margin: 0;
   font-style: normal;
@@ -5,52 +34,102 @@
   font-size: 28px;
   line-height: 38px;
   letter-spacing: 1.2px;
-  color: $color_darkest_darkest_70;
 }
 
 .offer__price {
-  margin: 0;
+  margin: 0 0 0 auto;
   font-style: normal;
   font-weight: bold;
   font-size: 25px;
   line-height: 34px;
   text-align: right;
-  color: $color_darkest_darkest_70;
 }
 
 .offer__check-out {
-  margin: 0;
+  width: 295px;
+  margin: 0 0 27px;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 24px;
+  letter-spacing: 1.1px;
   color: $color_dark;
 }
 
-.offer ul {
+.offer__list {
+  position: relative;
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 33px 0 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $color_dark;
+    transition: background-color $transition;
+
+    .offer:hover & {
+      background-color: $color_accent_basic;
+    }
+  }
 }
 
-.offer li {
+.offer__list li {
+  position: relative;
+  width: 100%;
+  margin: 0 0 15px;
+  padding: 0 33px 0 31px;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 32px;
+  letter-spacing: 1.1px;
   color: $color_dark;
 }
 
-.offer a {
+.offer__list svg {
+  position: absolute;
+  left: -4px;
+  top: 4px;
   display: block;
-  margin: 0;
-  padding: 0;
+  width: 22px;
+  height: 22px;
+  fill: $color_accent_basic;
+  transition: fill $transition;
+
+  .offer:hover & {
+    fill: $color_darkest_darkest;
+  }
+}
+
+.offer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 75px;
+  margin: auto 0 0 0;
+  padding: 20px;
   font-style: normal;
   font-weight: bold;
   font-size: 12px;
   line-height: 15px;
-  letter-spacing: 2px;
+  letter-spacing: 2.6px;
   text-transform: uppercase;
   text-decoration: none;
   color: $color_white;
+  background-color: $color_accent_basic;
+  transition: background-color $transition, opacity $transition;
+
+  &:hover {
+    background-color: $color_hover_accent;
+  }
+
+  &:active {
+    background-color: $color_hover_accent;
+    opacity: 0.6;
+  }
 }
