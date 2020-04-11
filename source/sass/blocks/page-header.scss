@@ -137,6 +137,14 @@
     border: none;
     transition: background-color $transition, opacity $transition;
 
+    .page-header:not(.page-header--close) &:hover {
+      opacity: 0.6;
+    }
+
+    .page-header:not(.page-header--close) &:active {
+      opacity: 0.3;
+    }
+
     .page-header--close & {
       padding: 10px 21px;
       background-color: $color_accent_basic;

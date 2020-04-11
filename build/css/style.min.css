@@ -492,6 +492,10 @@ input[type="radio"].visually-hidden {
     border: none;
     -webkit-transition: background-color 0.3s ease-in, opacity 0.3s ease-in;
     transition: background-color 0.3s ease-in, opacity 0.3s ease-in; }
+    .page-header:not(.page-header--close) .page-header__menu button:hover {
+      opacity: 0.6; }
+    .page-header:not(.page-header--close) .page-header__menu button:active {
+      opacity: 0.3; }
     .page-header--close .page-header__menu button {
       padding: 10px 21px;
       background-color: #fe7865; }
