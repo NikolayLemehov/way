@@ -1048,6 +1048,7 @@ input[type="radio"].visually-hidden {
 
 .visit-place__pseudo-button {
   position: relative;
+  z-index: 1;
   display: block;
   width: 266px;
   min-height: 77px;
@@ -1071,6 +1072,7 @@ input[type="radio"].visually-hidden {
 
 .visit-place__country {
   position: relative;
+  z-index: 1;
   width: 215px;
   margin: auto 0 0;
   padding: 15px 15px 17px;
