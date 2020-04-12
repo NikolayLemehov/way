@@ -28,7 +28,7 @@
 }
 
 .offer h3 {
-  margin: 0;
+  margin: 0 auto 0 0;
   font-style: normal;
   font-weight: 600;
   font-size: 28px;
@@ -37,7 +37,7 @@
 }
 
 .offer__price {
-  margin: 0 0 0 auto;
+  margin: 0;
   font-style: normal;
   font-weight: bold;
   font-size: 25px;
@@ -46,8 +46,8 @@
 }
 
 .offer__check-out {
-  width: 295px;
   margin: 0 0 27px;
+  padding: 0 15px 0 0;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;

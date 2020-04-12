@@ -167,11 +167,11 @@
     $lr_m: "calc((100vw - #{$min_view}) * #{$rate} + #{$min_lr_m})";
 
     &:nth-child(4) {
-      margin: 0 0 98px #{$lr_m};
+      margin: 0 0 20px #{$lr_m};
     }
 
     &:nth-child(5) {
-      margin: 0 #{$lr_m} 98px 0;
+      margin: 0 #{$lr_m} 20px 0;
     }
   }
 
