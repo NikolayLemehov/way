@@ -1,10 +1,91 @@
 .prices__inner {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   flex-direction: row-reverse;
   width: $desktop_container_width - 20px;
   margin: 0 auto;
   padding: 126px 0 0 25px;
+}
+
+.prices__intro {
+  width: 314px;
+  padding: 112px 0 0;
+}
+
+.prices__intro h2 {
+  position: relative;
+  margin: 0 0 31px 2px;
+  padding: 0 0 17px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 55px;
+  line-height: 90px;
+  letter-spacing: 3.3px;
+  color: $color_dark;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: -2px;
+    bottom: 0;
+    width: 175px;
+    height: 3px;
+    background: $color_accent_basic;
+  }
+}
+
+.prices__text {
+  margin: 0 0 60px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 170%;
+  letter-spacing: 1.2px;
+  color: $color_dark_70;
+}
+
+.prices__accent-text {
+  margin: 0 0 12px;
+  padding: 0 0 0 47px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 34px;
+  letter-spacing: 1.6px;
+  color: $color_darkest_darkest;
+}
+
+.prices__phone-link {
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 0 0 0 46px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 32px;
+  text-decoration: none;
+  color: $color_black;
+  transition: opacity $transition;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.prices__phone-link svg {
+  position: absolute;
+  left: -4px;
+  top: 0;
+  display: block;
+  width: 30px;
+  height: 30px;
+  fill: transparent;
+  stroke: $color_accent_basic;
 }
 
 .prices__list {
@@ -20,43 +101,3 @@
 .prices__list li {
   width: 370px;
 }
-
-.prices h2 {
-  margin: 0;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 55px;
-  line-height: 90px;
-  color: $color_dark;
-}
-
-.prices__item--intro p {
-  margin: 0;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 170%;
-  color: $color_dark_70;
-}
-
-.prices__item--intro b {
-  margin: 0;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 22px;
-  line-height: 34px;
-  color: $color_darkest_darkest;
-}
-
-.prices__item--intro a {
-  display: block;
-  margin: 0;
-  padding: 0;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 32px;
-  text-decoration: none;
-  color: $color_black;
-}
-
