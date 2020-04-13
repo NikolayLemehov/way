@@ -1,5 +1,6 @@
 const BETWEEN_ANIMATION_TIME = 50; // ms
 const BREAK_POINT_DESKTOP = 1024;
+const KEY_CODE_ESC = 27;
 
 const activeForEeachNodeListForIE = () => {
   if (typeof NodeList.prototype.forEach !== `function`) {
@@ -24,4 +25,4 @@ const getScrollbarWidth = () => {
   return scrollbarWidth;
 };
 
-export {activeForEeachNodeListForIE, getScrollbarWidth, BETWEEN_ANIMATION_TIME, BREAK_POINT_DESKTOP};
+export {BETWEEN_ANIMATION_TIME, BREAK_POINT_DESKTOP, KEY_CODE_ESC, activeForEeachNodeListForIE, getScrollbarWidth};

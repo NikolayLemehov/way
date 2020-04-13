@@ -399,7 +399,7 @@
                     Экскурсии по удивительно красивым местам Европы
                   </li>
                 </ul>
-                <a href="#">Купить тур сейчас</a>
+                <a class="offer__btn" href="#">Купить тур сейчас</a>
               </div>
             </li>
             <li>
@@ -443,7 +443,7 @@
                     Экскурсии по удивительно красивым местам Европы
                   </li>
                 </ul>
-                <a href="#">Купить тур сейчас</a>
+                <a class="offer__btn" href="#">Купить тур сейчас</a>
               </div>
             </li>
           </ul>
@@ -515,6 +515,29 @@
         </li>
       </ul>
     </footer>
+    <div class="buy-tour buy-tour--popup" style="display: none;">
+      <form action="#" method="post">
+        <button class="buy-tour__close-btn" type="button" aria-label="Закрыть">
+          <svg width="50" height="52">
+            <use xlink:href="#icon-btn-close"></use>
+          </svg>
+        </button>
+        <p class="buy-tour__title">Купить тур</p>
+        <div class="buy-tour__field buy-tour__field--phone">
+          <input type="text" name="phone" id="field-phone" maxlength="10" required>
+          <label for="field-phone" aria-label="Номер телефона">
+            +7&#160;<span>Введите 10 цифр номера</span>
+          </label>
+        </div>
+        <div class="buy-tour__field buy-tour__field--mail">
+          <input type="text" name="email" id="field-email">
+          <label for="field-email" aria-label="Электронная почта">
+            <span>E-mail</span>
+          </label>
+        </div>
+        <button class="buy-tour__submit-btn" type="submit">Отправить</button>
+      </form>
+    </div>
     <script src="js/vendor.js"></script>
     <script src="js/main.js"></script>
   </body>
