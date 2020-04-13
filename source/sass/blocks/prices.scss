@@ -220,3 +220,49 @@
     }
   }
 }
+
+@media (max-width: $tablet_width - 1) {
+  $max_view: $tablet_width;
+  $min_view: $mobile_width;
+
+  .prices__inner {
+    padding: 25px 0 20px;
+  }
+
+  .prices__intro {
+    padding: 0 25px 0;
+  }
+
+  .prices__intro h2 {
+    font-size: 24px;
+    line-height: 150%;
+  }
+
+  .prices__text {
+    margin: 0 0 18px;
+  }
+
+  .prices__phone-link {
+    margin: 0 0 40px;
+  }
+
+  .prices__list {
+    $li_mb: 26px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 100%;
+    margin: 0 0 $li_mb * -1;
+    padding: 0;
+
+    li {
+      $max_width: 430px;
+      $min_width: 288px;
+      $rate_width: ($max_width - $min_width) / ($max_view - $min_view);
+      $width: "calc((100vw - #{$min_view}) * #{$rate_width} + #{$min_width})";
+      display: flex;
+      width: #{$width};
+      margin: 0 0 $li_mb;
+    }
+  }
+}

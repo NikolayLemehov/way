@@ -1566,7 +1566,7 @@ input[type="radio"].visually-hidden {
 
 @media (max-width: 767px) {
   .country__inner {
-    padding: 6px 0 60px; }
+    padding: 6px 0 20px; }
   .country__bookmark-container {
     width: calc(100% - 15px);
     margin: 0 0 0 15px; }
@@ -1758,6 +1758,38 @@ input[type="radio"].visually-hidden {
       display: flex;
       width: calc((100vw - 768px) * 0.16406 + 288px);
       margin: 0 0 20px; } }
+
+@media (max-width: 767px) {
+  .prices__inner {
+    padding: 25px 0 20px; }
+  .prices__intro {
+    padding: 0 25px 0; }
+  .prices__intro h2 {
+    font-size: 24px;
+    line-height: 150%; }
+  .prices__text {
+    margin: 0 0 18px; }
+  .prices__phone-link {
+    margin: 0 0 40px; }
+  .prices__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    margin: 0 0 -26px;
+    padding: 0; }
+    .prices__list li {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      width: calc((100vw - 320px) * 0.31696 + 288px);
+      margin: 0 0 26px; } }
 
 .offer {
   display: -webkit-box;
