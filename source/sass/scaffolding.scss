@@ -46,3 +46,26 @@ input[type="radio"].visually-hidden {
 *::after {
   box-sizing: inherit;
 }
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50px;
+  padding: 10px;
+  font-style: normal;
+  text-transform: uppercase;
+  color: $color_white;
+  background-color: $color_accent_basic;
+  border: none;
+  transition: background-color $transition, opacity $transition;
+
+  &:hover {
+    background-color: $color_hover_accent;
+  }
+
+  &:active {
+    background-color: $color_hover_accent;
+    opacity: 0.6;
+  }
+}

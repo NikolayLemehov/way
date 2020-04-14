@@ -66,30 +66,11 @@
 .questions__submit-btn {
   align-self: center;
   width: 176px;
-  min-height: 50px;
   margin: 0;
-  padding: 0;
   font-weight: bold;
   font-size: 12px;
   line-height: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   letter-spacing: 2.7px;
-  text-transform: uppercase;
-  color: $color_white;
-  background-color: $color_accent_basic;
-  border: none;
-  transition: background-color $transition, opacity $transition;
-
-  &:hover {
-    background-color: $color_hover_accent;
-  }
-
-  &:active {
-    background-color: $color_hover_accent;
-    opacity: 0.6;
-  }
 }
 
 @media (max-width: $desktop_container_width - 1) {

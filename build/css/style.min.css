@@ -375,6 +375,31 @@ input[type="radio"].visually-hidden {
   -webkit-box-sizing: inherit;
           box-sizing: inherit; }
 
+.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 50px;
+  padding: 10px;
+  font-style: normal;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #fe7865;
+  border: none;
+  -webkit-transition: background-color 0.3s ease-in, opacity 0.3s ease-in;
+  transition: background-color 0.3s ease-in, opacity 0.3s ease-in; }
+  .btn:hover {
+    background-color: #f17d4b; }
+  .btn:active {
+    background-color: #f17d4b;
+    opacity: 0.6; }
+
 .page-header nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2056,6 +2081,7 @@ input[type="radio"].visually-hidden {
     width: 100%;
     height: 50px;
     padding: 10px 10px 10px 15px;
+    background-color: #ffffff;
     border: 1px solid rgba(44, 46, 63, 0.3); }
     .questions__field input[required] {
       padding-left: 48px; }
@@ -2114,33 +2140,11 @@ input[type="radio"].visually-hidden {
   -ms-flex-item-align: center;
       align-self: center;
   width: 176px;
-  min-height: 50px;
   margin: 0;
-  padding: 0;
   font-weight: bold;
   font-size: 12px;
   line-height: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  letter-spacing: 2.7px;
-  text-transform: uppercase;
-  color: #ffffff;
-  background-color: #fe7865;
-  border: none;
-  -webkit-transition: background-color 0.3s ease-in, opacity 0.3s ease-in;
-  transition: background-color 0.3s ease-in, opacity 0.3s ease-in; }
-  .questions__submit-btn:hover {
-    background-color: #f17d4b; }
-  .questions__submit-btn:active {
-    background-color: #f17d4b;
-    opacity: 0.6; }
+  letter-spacing: 2.7px; }
 
 @media (max-width: 1239px) {
   .questions__inner {
@@ -2238,13 +2242,38 @@ input[type="radio"].visually-hidden {
             transform: translateX(100%); }
   .buy-tour form {
     position: relative;
-    width: 670px;
-    height: 465px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 728px;
+    height: 444px;
     max-height: 100%;
     max-width: 100%;
-    margin: 0 0 0;
-    padding: 70px 20px;
+    margin: 0;
+    padding: 0;
     background-color: #ffffff; }
+
+.buy-tour__bg {
+  width: 338px;
+  background: #d8d8d8 url("../img/buy-tour-bg@1x.jpg") no-repeat 0 0;
+  background-size: cover; }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .buy-tour__bg {
+      background-image: url("../img/buy-tour-bg@2x.jpg"); } }
+
+.buy-tour__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 72px 60px;
+  background: #fbf8f8; }
 
 .buy-tour__close-btn {
   position: absolute;
@@ -2271,7 +2300,7 @@ input[type="radio"].visually-hidden {
   font-weight: 600;
   font-size: 25px;
   line-height: 170%;
-  letter-spacing: 1px;
+  letter-spacing: 0.9px;
   text-align: center;
   color: #48494d; }
 
@@ -2287,6 +2316,7 @@ input[type="radio"].visually-hidden {
     width: 100%;
     height: 50px;
     padding: 10px 10px 10px 15px;
+    background-color: #ffffff;
     border: 1px solid rgba(44, 46, 63, 0.3); }
     .buy-tour__field input[required] {
       padding-left: 48px; }
@@ -2342,44 +2372,35 @@ input[type="radio"].visually-hidden {
     margin: 0 0 20px; }
 
 .buy-tour__submit-btn {
-  width: 100%;
-  min-height: 50px;
+  -ms-flex-item-align: center;
+      align-self: center;
+  width: 176px;
   margin: 0;
-  padding: 0;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 10px;
-  line-height: 12px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #ffffff;
-  background-color: #fe7865;
-  border: none;
-  -webkit-transition: background-color 0.3s ease-in, opacity 0.3s ease-in;
-  transition: background-color 0.3s ease-in, opacity 0.3s ease-in; }
-  .buy-tour__submit-btn:hover {
-    background-color: #f17d4b; }
-  .buy-tour__submit-btn:active {
-    background-color: #f17d4b;
-    opacity: 0.6; }
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 2.7px; }
 
 @media (max-width: 1023px) {
   .buy-tour form {
     width: 100%;
+    height: 100%; }
+  .buy-tour__bg {
+    display: none; }
+  .buy-tour__container {
+    width: 100%;
     height: 100%;
-    padding: 70px 60px; } }
+    padding: 70px 60px;
+    background: #ffffff; }
+  .buy-tour__submit-btn {
+    width: 100%;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px; } }
 
 @media (max-width: 767px) {
-  .buy-tour form {
+  .buy-tour__container {
     padding: 100px 16px; } }
 
 /*# sourceMappingURL=style.min.css.map */

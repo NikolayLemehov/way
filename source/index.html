@@ -468,7 +468,7 @@
                 <span>Данные не верны</span>
               </div>
             </div>
-            <button class="questions__submit-btn" type="submit">Отправить</button>
+            <button class="questions__submit-btn btn" type="submit">Отправить</button>
           </form>
         </div>
       </section>
@@ -545,20 +545,23 @@
             <use xlink:href="#icon-btn-close"></use>
           </svg>
         </button>
-        <p class="buy-tour__title">Купить тур</p>
-        <div class="buy-tour__field buy-tour__field--phone">
-          <input type="text" name="phone" id="popup-field-phone" placeholder="Введите 10 цифр номера" maxlength="14" required>
-          <label for="popup-field-phone" aria-label="Номер телефона">
-            +7&#160;
-          </label>
-          <span>Данные не верны</span>
+        <div class="buy-tour__bg"></div>
+        <div class="buy-tour__container">
+          <p class="buy-tour__title">Купить тур</p>
+          <div class="buy-tour__field buy-tour__field--phone">
+            <input type="text" name="phone" id="popup-field-phone" placeholder="Введите 10 цифр номера" maxlength="14" required>
+            <label for="popup-field-phone" aria-label="Номер телефона">
+              +7&#160;
+            </label>
+            <span>Данные не верны</span>
+          </div>
+          <div class="buy-tour__field buy-tour__field--mail">
+            <input type="email" name="email" id="popup-field-email" placeholder="E-mail">
+            <label for="popup-field-email" aria-label="Электронная почта"></label>
+            <span>Данные не верны</span>
+          </div>
+          <button class="buy-tour__submit-btn btn" type="submit">Отправить</button>
         </div>
-        <div class="buy-tour__field buy-tour__field--mail">
-          <input type="email" name="email" id="popup-field-email" placeholder="E-mail">
-          <label for="popup-field-email" aria-label="Электронная почта"></label>
-          <span>Данные не верны</span>
-        </div>
-        <button class="buy-tour__submit-btn" type="submit">Отправить</button>
       </form>
     </div>
     <div class="form-success form-success--popup" style="display: none;">
