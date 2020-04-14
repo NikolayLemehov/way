@@ -18,6 +18,6 @@ const prices = new Prices(document.querySelector(`.prices`));
 const popupByTour = new PopupByTour(document.querySelector(`.buy-tour`));
 pageHeader.active();
 visitPlace.active(country);
-country.active();
+country.active(popupByTour);
 prices.active(popupByTour);
 popupByTour.active();

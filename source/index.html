@@ -33,7 +33,7 @@
           </button>
           <ul>
             <li><a class="js-trigger" href="#visit-place">О путешествии</a></li>
-            <li><a class="js-trigger" href="#">Цены</a></li>
+            <li><a class="js-trigger" href="#prices">Цены</a></li>
           </ul>
         </div>
         <div class="page-header__phone">
@@ -155,7 +155,7 @@
                     песчанника и обломочной горной породы, достигающих в высоту 600 метров, наградой
                     будет неописуемая красота природы и атмосфера, царящая в монастырях Метеоры.
                   </p>
-                  <a href="#">купить тур сейчас</a>
+                  <a class="detail-country__btn" href="#">купить тур сейчас</a>
                 </div>
                 <div class="detail-country__review">
                   <div class="detail-country__img">
@@ -199,7 +199,7 @@
                     крупный песок. Однако, присмотревшись, можно понять, что это не песок, а камни, перетёртые до
                     такого мелкого состояния.
                   </p>
-                  <a href="#">купить тур сейчас</a>
+                  <a class="detail-country__btn" href="#">купить тур сейчас</a>
                 </div>
                 <div class="detail-country__review">
                   <div class="detail-country__img">
@@ -237,7 +237,7 @@
                     лесистой местности возле Охридского озера и Самуиловой твердыни. А также мы заберемся на вершину
                     горы Татичев Камен где находится  археологический памятник Кокино в длину около 100 метров.
                   </p>
-                  <a href="#">купить тур сейчас</a>
+                  <a class="detail-country__btn" href="#">купить тур сейчас</a>
                 </div>
                 <div class="detail-country__review">
                   <div class="detail-country__img">
@@ -276,7 +276,7 @@
                     берегов доходит до 1300 метров, а шириной не превышает трех. При этом длина каньона составляет 80
                     км.
                   </p>
-                  <a href="#">купить тур сейчас</a>
+                  <a class="detail-country__btn" href="#">купить тур сейчас</a>
                 </div>
                 <div class="detail-country__review">
                   <div class="detail-country__img">
@@ -314,7 +314,7 @@
                     метровую глубину через 5 освещенных залов, украшенных удивительными нерукотворными скульптурами —
                     сталактитами и сталагмитами — формировавшимися тысячи и тысячи лет.
                   </p>
-                  <a href="#">купить тур сейчас</a>
+                  <a class="detail-country__btn" href="#">купить тур сейчас</a>
                 </div>
                 <div class="detail-country__review">
                   <div class="detail-country__img">
@@ -347,7 +347,7 @@
           </ul>
         </div>
       </section>
-      <section class="prices">
+      <section class="prices" id="prices">
         <div class="prices__inner">
           <div class="prices__intro">
             <h2>Цены</h2>
@@ -524,16 +524,14 @@
         </button>
         <p class="buy-tour__title">Купить тур</p>
         <div class="buy-tour__field buy-tour__field--phone">
-          <input type="text" name="phone" id="field-phone" maxlength="10" required>
+          <input type="text" name="phone" id="field-phone" placeholder="Введите 10 цифр номера" maxlength="14" required>
           <label for="field-phone" aria-label="Номер телефона">
-            +7&#160;<span>Введите 10 цифр номера</span>
+            +7&#160;
           </label>
         </div>
         <div class="buy-tour__field buy-tour__field--mail">
-          <input type="text" name="email" id="field-email">
-          <label for="field-email" aria-label="Электронная почта">
-            <span>E-mail</span>
-          </label>
+          <input type="email" name="email" id="field-email" placeholder="E-mail">
+          <label for="field-email" aria-label="Электронная почта"></label>
         </div>
         <button class="buy-tour__submit-btn" type="submit">Отправить</button>
       </form>

@@ -55,7 +55,7 @@
   color: $color_dark_70;
 }
 
-.detail-country__description a {
+.detail-country__btn {
   display: block;
   width: 250px;
   margin: 0;
@@ -202,7 +202,7 @@
     margin: 0 0 19px;
   }
 
-  .detail-country__description a {
+  .detail-country__btn {
     min-height: 50px;
     padding: 19px 15px;
     font-weight: 500;
@@ -259,7 +259,7 @@
     margin: 0 0 18px;
   }
 
-  .detail-country__description a {
+  .detail-country__btn {
     width: 288px;
   }
 

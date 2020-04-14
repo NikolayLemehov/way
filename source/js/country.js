@@ -5,20 +5,23 @@ export default class Country {
   constructor(element) {
     this.element = element;
     this.bookmarkList = element ? element.querySelector(`.country__bookmark-list`) : null;
-    this.bookmarkItems = element ? element.querySelectorAll(`.country__bookmark-item`) : null;
+    this.bookmarkItems = element ? element.querySelectorAll(`.country__bookmark-item`) : [];
     this.descriptionList = element ? element.querySelector(`.country__description-list`) : null;
-    this.isAllExisting = this.element && this.bookmarkList && this.descriptionList && this.bookmarkItems.length > 0;
+    this.btns = element ? element.querySelectorAll(`.detail-country__btn`) : [];
+    this.isAllExisting = this.element && this.bookmarkList && this.descriptionList && this.bookmarkItems.length > 0
+      && this.btns.length > 0;
     this.countryTabs = null;
     this.currentTab = null;
+    this.popupByTour = null;
   }
 
-  active() {
+  active(popupByTour) {
     if (!this.isAllExisting) {
       return;
     }
     this.countryTabs = Array.from(this.bookmarkItems).map((it) => new CountryTab(it));
-    const isAllCountryTabExisting = this.countryTabs.some((it) => it.isAllExisting);
-    if (!isAllCountryTabExisting) {
+    if (!this.countryTabs.some((it) => it.isAllExisting)) {
+      this.isAllExisting = false;
       return;
     }
 
@@ -43,9 +46,20 @@ export default class Country {
         this.bookmarkList.classList.remove(`country__bookmark-list--focus`);
       });
     });
+
+    this.popupByTour = popupByTour;
+    this.btns.forEach((it) => {
+      it.addEventListener(`click`, (evt) => {
+        evt.preventDefault();
+        this.popupByTour.show();
+      });
+    });
   }
 
   checkTab(countryName) {
+    if (!this.isAllExisting) {
+      return;
+    }
     const newTab = Array.from(this.countryTabs).find((it) => it.country === countryName);
     this._replaceTab(newTab);
   }

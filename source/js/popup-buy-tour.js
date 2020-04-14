@@ -4,8 +4,9 @@ export default class PopupBuyTour {
   constructor(element) {
     this.element = element;
     this.form = this.element ? this.element.querySelector(`form`) : null;
+    this.phone = this.form ? this.form.querySelector(`input[name="phone"]`) : null;
     this.closeBtn = this.element ? this.element.querySelector(`.buy-tour__close-btn`) : null;
-    this.isAllExisting = this.element && this.element && this.closeBtn;
+    this.isAllExisting = this.element && this.form && this.phone && this.closeBtn;
 
     this._onDocumentPopupEscKeyDown = this._onDocumentPopupEscKeyDown.bind(this);
     this._onClickOutsideForm = this._onClickOutsideForm.bind(this);
@@ -15,7 +16,17 @@ export default class PopupBuyTour {
     if (!this.isAllExisting) {
       return;
     }
-    this.show();
+
+    const validatePhone = (input) => {
+      return new window.IMask(input, {
+        mask: `(000)000-00-00`
+      });
+    };
+
+    if (this.phone) {
+      validatePhone(this.phone);
+    }
+
     this.closeBtn.addEventListener(`click`, (evt) => {
       evt.preventDefault();
       this._close();
