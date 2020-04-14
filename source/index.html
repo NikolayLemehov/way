@@ -449,6 +449,27 @@
           </ul>
         </div>
       </section>
+      <section class="questions">
+        <div class="questions__inner">
+          <form action="#" method="post">
+            <h2>У Вас остались вопросы?</h2>
+            <p>Оставьте свой номер или e-mail и мы свяжемся с Вами</p>
+            <div class="questions__container">
+              <div class="questions__field questions__field--phone">
+                <input type="text" name="phone" id="field-phone" placeholder="Введите 10 цифр номера" maxlength="14" required>
+                <label for="field-phone" aria-label="Номер телефона">
+                  +7&#160;
+                </label>
+              </div>
+              <div class="questions__field questions__field--mail">
+                <input type="email" name="email" id="field-email" placeholder="E-mail">
+                <label for="field-email" aria-label="Электронная почта"></label>
+              </div>
+            </div>
+            <button class="questions__submit-btn" type="submit">Отправить</button>
+          </form>
+        </div>
+      </section>
     </main>
     <footer class="page-footer">
       <h2 class="visually-hidden">Подвал сайта</h2>
@@ -524,14 +545,14 @@
         </button>
         <p class="buy-tour__title">Купить тур</p>
         <div class="buy-tour__field buy-tour__field--phone">
-          <input type="text" name="phone" id="field-phone" placeholder="Введите 10 цифр номера" maxlength="14" required>
-          <label for="field-phone" aria-label="Номер телефона">
+          <input type="text" name="phone" id="popup-field-phone" placeholder="Введите 10 цифр номера" maxlength="14" required>
+          <label for="popup-field-phone" aria-label="Номер телефона">
             +7&#160;
           </label>
         </div>
         <div class="buy-tour__field buy-tour__field--mail">
-          <input type="email" name="email" id="field-email" placeholder="E-mail">
-          <label for="field-email" aria-label="Электронная почта"></label>
+          <input type="email" name="email" id="popup-field-email" placeholder="E-mail">
+          <label for="popup-field-email" aria-label="Электронная почта"></label>
         </div>
         <button class="buy-tour__submit-btn" type="submit">Отправить</button>
       </form>
