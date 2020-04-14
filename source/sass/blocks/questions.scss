@@ -186,3 +186,43 @@
     line-height: 12px;
   }
 }
+
+@media (max-width: $tablet_width - 1) {
+  .questions__inner {
+    align-items: stretch;
+    min-height: 0;
+    padding: 0;
+    background: none;
+  }
+
+  .questions__inner form {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 50px 16px 50px;
+    background-color: $color_light;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  .questions__inner h2 {
+    margin: 0 0 20px;
+  }
+
+  .questions__inner p {
+    margin: 0 0 19px;
+  }
+
+  .questions__container {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .questions__field {
+    width: 100%;
+  }
+
+  .questions__submit-btn {
+    width: 100%;
+  }
+}
