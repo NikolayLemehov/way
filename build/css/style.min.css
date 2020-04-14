@@ -1742,13 +1742,9 @@ input[type="radio"].visually-hidden {
 
 @media (max-width: 1239px) {
   .prices__inner {
-    width: 100%; }
-  .prices__list {
-    width: calc((calc((100vw - 1024px) * 0.18519 + 330px) + 30px) * 2); }
-    .prices__list li {
-      width: calc((100vw - 1024px) * 0.18519 + 330px); } }
+    width: 100%; } }
 
-@media (max-width: 1023px) {
+@media (max-width: 1159px) {
   .prices__inner {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
@@ -1805,12 +1801,12 @@ input[type="radio"].visually-hidden {
         flex-wrap: wrap;
     width: 100%;
     margin: 0 0 -20px;
-    padding: 0 calc((100vw - 768px) * 0.30859 + 36px) 0; }
+    padding: 0 calc((100vw - 768px) * 0.20153 + 36px) 0; }
     .prices__list li {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      width: calc((100vw - 768px) * 0.16406 + 288px);
+      width: calc((100vw - 768px) * 0.23469 + 288px);
       margin: 0 0 20px; } }
 
 @media (max-width: 767px) {

@@ -111,28 +111,13 @@
 }
 
 @media (max-width: $desktop_container_width - 1) {
-  $max_view: $desktop_container_width;
-  $min_view: $desktop_width;
-
   .prices__inner {
     width: 100%;
   }
-
-  .prices__list {
-    $max_li_width: 370px;
-    $min_li_width: 330px;
-    $rate_li_width: ($max_li_width - $min_li_width) / ($max_view - $min_view);
-    $li_width: "calc((100vw - #{$min_view}) * #{$rate_li_width} + #{$min_li_width})";
-    width: calc((#{$li_width} + 30px) * 2);
-
-    li {
-      width: #{$li_width};
-    }
-  }
 }
 
-@media (max-width: $desktop_width - 1) {
-  $max_view: $desktop_width;
+@media (max-width: 1159px) {
+  $max_view: 1160px;
   $min_view: $tablet_width;
 
   .prices__inner {
@@ -210,7 +195,7 @@
     padding: 0 #{$lr_p} 0;
 
     li {
-      $max_width: 330px;
+      $max_width: 380px;
       $min_width: 288px;
       $rate_width: ($max_width - $min_width) / ($max_view - $min_view);
       $width: "calc((100vw - #{$min_view}) * #{$rate_width} + #{$min_width})";
