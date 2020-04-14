@@ -5,9 +5,15 @@ export default class PopupBuyTour {
     this.element = element;
     this.form = this.element ? this.element.querySelector(`form`) : null;
     this.phone = this.form ? this.form.querySelector(`input[name="phone"]`) : null;
+    this.email = this.form ? this.form.querySelector(`input[name="email"]`) : null;
     this.closeBtn = this.element ? this.element.querySelector(`.buy-tour__close-btn`) : null;
     this.submitBtn = this.element ? this.element.querySelector(`.buy-tour__submit-btn`) : null;
     this.isAllExisting = this.element && this.form && this.phone && this.closeBtn && this.submitBtn;
+    this.storage = {
+      phone: ``,
+      email: ``,
+      isSupport: true,
+    };
 
     this._onDocumentPopupEscKeyDown = this._onDocumentPopupEscKeyDown.bind(this);
     this._onClickOutsideForm = this._onClickOutsideForm.bind(this);
@@ -28,6 +34,8 @@ export default class PopupBuyTour {
       validatePhone(this.phone);
     }
 
+    this._loadStorage();
+
     this.closeBtn.addEventListener(`click`, (evt) => {
       evt.preventDefault();
       this._close();
@@ -38,6 +46,10 @@ export default class PopupBuyTour {
       const isCheckForm = this.form.checkValidity();
       if (isCheckForm) {
         evt.preventDefault();
+        if (this.storage.isSupport) {
+          localStorage.setItem(`phoneField`, this.phone.value);
+          localStorage.setItem(`questionField`, this.email.value);
+        }
       }
     });
   }
@@ -48,8 +60,15 @@ export default class PopupBuyTour {
     }
     document.documentElement.style.overflow = `hidden`;
     document.documentElement.style.paddingRight = `${getScrollbarWidth()}px`;
-
     this.element.style.display = ``;
+
+    if (this.storage.phone) {
+      this.phone.value = this.storage.phone;
+    }
+    if (this.storage.email) {
+      this.email.value = this.storage.email;
+    }
+
     setTimeout(() => this.element.classList.add(`buy-tour--open`), BETWEEN_ANIMATION_TIME);
     document.addEventListener(`keydown`, this._onDocumentPopupEscKeyDown);
     window.addEventListener(`click`, this._onClickOutsideForm);
@@ -68,6 +87,15 @@ export default class PopupBuyTour {
     this.element.removeEventListener(`transitionend`, this._removeDisplay);
     document.removeEventListener(`keydown`, this._onDocumentPopupEscKeyDown);
     window.removeEventListener(`click`, this._onClickOutsideForm);
+  }
+
+  _loadStorage() {
+    try {
+      this.storage.phone = localStorage.getItem(`phoneField`);
+      this.storage.email = localStorage.getItem(`emailField`);
+    } catch (err) {
+      this.storage.isSupport = false;
+    }
   }
 
   _removeDisplay() {
