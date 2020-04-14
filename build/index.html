@@ -536,7 +536,7 @@
         </li>
       </ul>
     </footer>
-    <div class="buy-tour buy-tour--popup" style="display: none;">
+    <div class="buy-tour popup" style="display: none;">
       <form action="#" method="post">
         <button class="buy-tour__close-btn" type="button" aria-label="Закрыть">
           <svg width="50" height="52">
@@ -562,9 +562,14 @@
         </div>
       </form>
     </div>
-    <div class="form-success form-success--popup" style="display: none;">
+    <div class="form-success popup" style="display: none;">
       <div class="form-success__inner">
-        <p>Форма успешно отправлена, спасибо! :)</p>
+        <button class="form-success__close-btn" type="button" aria-label="Закрыть">
+          <svg width="50" height="52">
+            <use xlink:href="#icon-btn-close"></use>
+          </svg>
+        </button>
+        <p>Форма успешно отправлена, спасибо!&#160;:)</p>
       </div>
     </div>
     <script src="js/vendor.js"></script>

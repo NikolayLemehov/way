@@ -5,8 +5,7 @@ export default class Questions {
     this.className = className;
     this.element = document.querySelector(`.${this.className}`);
     this.formEntity = new Form(this.element.querySelector(`form`));
-    this.submitBtn = this.element ? this.element.querySelector(`.${this.className}__submit-btn`) : null;
-    this.isAllExisting = this.element && this.submitBtn && this.formEntity.active();
+    this.isAllExisting = this.element && this.formEntity.active();
   }
 
   active() {
@@ -14,7 +13,7 @@ export default class Questions {
       return;
     }
 
-    this.submitBtn.addEventListener(`click`, (evt) => {
+    this.formEntity.submitBtn.addEventListener(`click`, (evt) => {
       this.formEntity.validatePhone();
       this.formEntity.validateEmail();
       if (this.formEntity.form.checkValidity()) {

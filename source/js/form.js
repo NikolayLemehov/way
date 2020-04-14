@@ -3,7 +3,8 @@ export default class Form {
     this.form = form;
     this.phone = this.form ? this.form.querySelector(`input[name="phone"]`) : null;
     this.email = this.form ? this.form.querySelector(`input[name="email"]`) : null;
-    this.isAllExisting = this.form && this.phone && this.email;
+    this.submitBtn = this.form ? this.form.querySelector(`button[type="submit"]`) : null;
+    this.isAllExisting = this.form && this.phone && this.email && this.submitBtn;
     this.iMaskPhone = {};
   }
 

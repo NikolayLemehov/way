@@ -25,4 +25,25 @@ const getScrollbarWidth = () => {
   return scrollbarWidth;
 };
 
-export {BETWEEN_ANIMATION_TIME, BREAK_POINT_DESKTOP, KEY_CODE_ESC, activeForEeachNodeListForIE, getScrollbarWidth};
+const openPopup = (element) => {
+  document.documentElement.style.overflow = `hidden`;
+  document.documentElement.style.paddingRight = `${getScrollbarWidth()}px`;
+  element.style.display = ``;
+  setTimeout(() => element.classList.add(`popup--open`), BETWEEN_ANIMATION_TIME);
+};
+
+const closePopup = (element) => {
+  document.documentElement.style.overflow = ``;
+  document.documentElement.style.paddingRight = ``;
+  if (element.classList.contains(`popup--open`)) {
+    element.classList.remove(`popup--open`);
+  }
+  const removeDisplay = () => {
+    element.style.display = ``;
+  };
+  element.addEventListener(`transitionend`, removeDisplay);
+  element.removeEventListener(`transitionend`, removeDisplay);
+};
+
+export {BETWEEN_ANIMATION_TIME, BREAK_POINT_DESKTOP, KEY_CODE_ESC, activeForEeachNodeListForIE, getScrollbarWidth,
+  openPopup, closePopup};

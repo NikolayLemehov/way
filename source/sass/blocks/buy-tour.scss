@@ -1,32 +1,13 @@
-.buy-tour {
-  position: fixed;
-  z-index: 1;
+.buy-tour form {
+  position: relative;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  left: -100vw;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.6);
-  transition: transform $transition;
-
-  &--open {
-    transform: translateX(100%);
-  }
-
-  form {
-    position: relative;
-    display: flex;
-    width: 728px;
-    height: 444px;
-    max-height: 100%;
-    max-width: 100%;
-    margin: 0;
-    padding: 0;
-    background-color: $color_white;
-  }
+  width: 728px;
+  height: 444px;
+  max-height: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: $color_white;
 }
 
 .buy-tour__bg {
