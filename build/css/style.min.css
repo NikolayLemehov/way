@@ -2045,17 +2045,16 @@ input[type="radio"].visually-hidden {
 
 .questions__field {
   position: relative;
-  width: 268px;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 17px;
   letter-spacing: 1px;
-  color: #141517; }
+  color: #141517;
+  width: 268px; }
   .questions__field input {
     width: 100%;
     height: 50px;
-    margin: 0 0 25px;
     padding: 10px 10px 10px 15px;
     border: 1px solid rgba(44, 46, 63, 0.3); }
     .questions__field input[required] {
@@ -2094,18 +2093,22 @@ input[type="radio"].visually-hidden {
       height: 7px;
       margin: 0 5px 0 0;
       background: url("../img/required.svg") no-repeat 0 0; }
-    .questions__field input:focus ~ label > span {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      margin: -1px;
-      border: 0;
-      padding: 0;
-      white-space: nowrap;
-      -webkit-clip-path: inset(100%);
-              clip-path: inset(100%);
-      clip: rect(0 0 0 0);
-      overflow: hidden; }
+    .questions__field input ~ span {
+      display: none; }
+    .questions__field input.input-error {
+      border: 1px solid #fe7865; }
+      .questions__field input.input-error ~ span {
+        position: absolute;
+        left: 0;
+        top: -16px;
+        display: block;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 15px;
+        color: #fe7865; }
+  .questions__field input {
+    margin: 0 0 25px; }
 
 .questions__submit-btn {
   -ms-flex-item-align: center;
@@ -2283,7 +2286,6 @@ input[type="radio"].visually-hidden {
   .buy-tour__field input {
     width: 100%;
     height: 50px;
-    margin: 0 0 20px;
     padding: 10px 10px 10px 15px;
     border: 1px solid rgba(44, 46, 63, 0.3); }
     .buy-tour__field input[required] {
@@ -2322,18 +2324,22 @@ input[type="radio"].visually-hidden {
       height: 7px;
       margin: 0 5px 0 0;
       background: url("../img/required.svg") no-repeat 0 0; }
-    .buy-tour__field input:focus ~ label > span {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      margin: -1px;
-      border: 0;
-      padding: 0;
-      white-space: nowrap;
-      -webkit-clip-path: inset(100%);
-              clip-path: inset(100%);
-      clip: rect(0 0 0 0);
-      overflow: hidden; }
+    .buy-tour__field input ~ span {
+      display: none; }
+    .buy-tour__field input.input-error {
+      border: 1px solid #fe7865; }
+      .buy-tour__field input.input-error ~ span {
+        position: absolute;
+        left: 0;
+        top: -16px;
+        display: block;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 15px;
+        color: #fe7865; }
+  .buy-tour__field input {
+    margin: 0 0 20px; }
 
 .buy-tour__submit-btn {
   width: 100%;

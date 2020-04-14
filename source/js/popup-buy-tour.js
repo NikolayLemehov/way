@@ -1,14 +1,13 @@
+import Form from './form';
 import {KEY_CODE_ESC, BETWEEN_ANIMATION_TIME, getScrollbarWidth} from './utils';
 
 export default class PopupBuyTour {
   constructor(element) {
     this.element = element;
-    this.form = this.element ? this.element.querySelector(`form`) : null;
-    this.phone = this.form ? this.form.querySelector(`input[name="phone"]`) : null;
-    this.email = this.form ? this.form.querySelector(`input[name="email"]`) : null;
+    this.formEntity = new Form(this.element.querySelector(`form`));
     this.closeBtn = this.element ? this.element.querySelector(`.buy-tour__close-btn`) : null;
     this.submitBtn = this.element ? this.element.querySelector(`.buy-tour__submit-btn`) : null;
-    this.isAllExisting = this.element && this.form && this.phone && this.closeBtn && this.submitBtn;
+    this.isAllExisting = this.element && this.closeBtn && this.submitBtn && this.formEntity.active();
     this.storage = {
       phone: ``,
       email: ``,
@@ -24,16 +23,6 @@ export default class PopupBuyTour {
       return;
     }
 
-    const validatePhone = (input) => {
-      return new window.IMask(input, {
-        mask: `(000)000-00-00`
-      });
-    };
-
-    if (this.phone) {
-      validatePhone(this.phone);
-    }
-
     this._loadStorage();
 
     this.closeBtn.addEventListener(`click`, (evt) => {
@@ -42,14 +31,11 @@ export default class PopupBuyTour {
     });
 
     this.submitBtn.addEventListener(`click`, (evt) => {
-      this._validatePhone();
-      const isCheckForm = this.form.checkValidity();
-      if (isCheckForm) {
+      this.formEntity.validatePhone();
+      this.formEntity.validateEmail();
+      if (this.formEntity.form.checkValidity()) {
         evt.preventDefault();
-        if (this.storage.isSupport) {
-          localStorage.setItem(`phoneField`, this.phone.value);
-          localStorage.setItem(`questionField`, this.email.value);
-        }
+        this._saveStorage();
       }
     });
   }
@@ -63,10 +49,10 @@ export default class PopupBuyTour {
     this.element.style.display = ``;
 
     if (this.storage.phone) {
-      this.phone.value = this.storage.phone;
+      this.formEntity.iMaskPhone.value = this.storage.phone;
     }
     if (this.storage.email) {
-      this.email.value = this.storage.email;
+      this.formEntity.email.value = this.storage.email;
     }
 
     setTimeout(() => this.element.classList.add(`buy-tour--open`), BETWEEN_ANIMATION_TIME);
@@ -98,19 +84,15 @@ export default class PopupBuyTour {
     }
   }
 
-  _removeDisplay() {
-    this.element.style.display = ``;
+  _saveStorage() {
+    if (this.storage.isSupport) {
+      localStorage.setItem(`phoneField`, this.formEntity.phone.value);
+      localStorage.setItem(`questionField`, this.formEntity.email.value);
+    }
   }
 
-  _validatePhone() {
-    const string = this.phone.value;
-    const result = string.match(/\(\d{3}\)\d{3}-\d{2}-\d{2}/);
-    const foundMatch = result ? result[0] : null;
-    if (foundMatch === string) {
-      this.phone.setCustomValidity(``);
-    } else {
-      this.phone.setCustomValidity(`Номер телефона должен соответствовать следующий маске (000)000-00-00`);
-    }
+  _removeDisplay() {
+    this.element.style.display = ``;
   }
 
   _onDocumentPopupEscKeyDown(evt) {

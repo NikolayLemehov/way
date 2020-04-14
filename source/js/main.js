@@ -16,7 +16,7 @@ const pageHeader = new PageHeader(document.querySelector(`.page-header`));
 const visitPlace = new VisitPlace(document.querySelector(`.visit-place`));
 const country = new Country(document.querySelector(`.country`));
 const prices = new Prices(document.querySelector(`.prices`));
-const questions = new Questions(document.querySelector(`.questions`));
+const questions = new Questions(`questions`);
 const popupByTour = new PopupByTour(document.querySelector(`.buy-tour`));
 pageHeader.active();
 visitPlace.active(country);

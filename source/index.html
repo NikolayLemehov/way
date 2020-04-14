@@ -460,10 +460,12 @@
                 <label for="field-phone" aria-label="Номер телефона">
                   +7&#160;
                 </label>
+                <span>Данные не верны</span>
               </div>
               <div class="questions__field questions__field--mail">
                 <input type="email" name="email" id="field-email" placeholder="E-mail">
                 <label for="field-email" aria-label="Электронная почта"></label>
+                <span>Данные не верны</span>
               </div>
             </div>
             <button class="questions__submit-btn" type="submit">Отправить</button>
@@ -549,13 +551,20 @@
           <label for="popup-field-phone" aria-label="Номер телефона">
             +7&#160;
           </label>
+          <span>Данные не верны</span>
         </div>
         <div class="buy-tour__field buy-tour__field--mail">
           <input type="email" name="email" id="popup-field-email" placeholder="E-mail">
           <label for="popup-field-email" aria-label="Электронная почта"></label>
+          <span>Данные не верны</span>
         </div>
         <button class="buy-tour__submit-btn" type="submit">Отправить</button>
       </form>
+    </div>
+    <div class="form-success form-success--popup" style="display: none;">
+      <div class="form-success__inner">
+        <p>Форма успешно отправлена, спасибо! :)</p>
+      </div>
     </div>
     <script src="js/vendor.js"></script>
     <script src="js/main.js"></script>
