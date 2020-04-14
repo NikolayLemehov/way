@@ -147,3 +147,9 @@
     opacity: 0.6;
   }
 }
+
+@media (max-width: $desktop_container_width - 1) {
+  .questions__inner {
+    width: calc(100% - 45px);
+  }
+}
