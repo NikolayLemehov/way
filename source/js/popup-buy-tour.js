@@ -6,7 +6,8 @@ export default class PopupBuyTour {
     this.form = this.element ? this.element.querySelector(`form`) : null;
     this.phone = this.form ? this.form.querySelector(`input[name="phone"]`) : null;
     this.closeBtn = this.element ? this.element.querySelector(`.buy-tour__close-btn`) : null;
-    this.isAllExisting = this.element && this.form && this.phone && this.closeBtn;
+    this.submitBtn = this.element ? this.element.querySelector(`.buy-tour__submit-btn`) : null;
+    this.isAllExisting = this.element && this.form && this.phone && this.closeBtn && this.submitBtn;
 
     this._onDocumentPopupEscKeyDown = this._onDocumentPopupEscKeyDown.bind(this);
     this._onClickOutsideForm = this._onClickOutsideForm.bind(this);
@@ -30,6 +31,14 @@ export default class PopupBuyTour {
     this.closeBtn.addEventListener(`click`, (evt) => {
       evt.preventDefault();
       this._close();
+    });
+
+    this.submitBtn.addEventListener(`click`, (evt) => {
+      this._validatePhone();
+      const isCheckForm = this.form.checkValidity();
+      if (isCheckForm) {
+        evt.preventDefault();
+      }
     });
   }
 
@@ -63,6 +72,17 @@ export default class PopupBuyTour {
 
   _removeDisplay() {
     this.element.style.display = ``;
+  }
+
+  _validatePhone() {
+    const string = this.phone.value;
+    const result = string.match(/\(\d{3}\)\d{3}-\d{2}-\d{2}/);
+    const foundMatch = result ? result[0] : null;
+    if (foundMatch === string) {
+      this.phone.setCustomValidity(``);
+    } else {
+      this.phone.setCustomValidity(`Номер телефона должен соответствовать следующий маске (000)000-00-00`);
+    }
   }
 
   _onDocumentPopupEscKeyDown(evt) {
