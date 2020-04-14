@@ -188,6 +188,9 @@
 }
 
 @media (max-width: $tablet_width - 1) {
+  $max_view: $tablet_width;
+  $min_view: $mobile_width;
+
   .questions__inner {
     align-items: stretch;
     min-height: 0;
@@ -196,10 +199,14 @@
   }
 
   .questions__inner form {
+    $max_lr_p: 120px;
+    $min_lr_p: 16px;
+    $rate_lr_p: ($max_lr_p - $min_lr_p) / ($max_view - $min_view);
+    $lr_p: "calc((100vw - #{$min_view}) * #{$rate_lr_p} + #{$min_lr_p})";
     width: 100%;
     height: auto;
     margin: 0;
-    padding: 50px 16px 50px;
+    padding: 50px #{$lr_p} 50px;
     background-color: $color_light;
     box-shadow: none;
     border-radius: 0;
