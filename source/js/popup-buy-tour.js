@@ -78,8 +78,10 @@ export default class PopupBuyTour {
 
   _saveStorage() {
     if (this.storage.isSupport) {
-      localStorage.setItem(`phoneField`, this.formEntity.phone.value);
-      localStorage.setItem(`questionField`, this.formEntity.email.value);
+      this.storage.phone = this.formEntity.phone.value;
+      this.storage.email = this.formEntity.email.value;
+      localStorage.setItem(`phoneField`, this.storage.phone);
+      localStorage.setItem(`emailField`, this.storage.email);
     }
   }
 
