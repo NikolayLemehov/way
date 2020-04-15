@@ -40,7 +40,7 @@ export default class Form {
   }
 
   validateEmail() {
-    if (RegEx.EMAIL_SEND.test(this.email.value)) {
+    if (RegEx.EMAIL_SEND.test(this.email.value) || this.email.value === ``) {
       this.email.setCustomValidity(``);
       if (this.email.classList.contains(`input-error`)) {
         this.email.classList.remove(`input-error`);
