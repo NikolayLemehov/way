@@ -75,14 +75,14 @@ input[type="radio"].visually-hidden {
   z-index: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
   left: -100vw;
   top: 0;
   width: 100vw;
   height: 100vh;
   background-color: $color_dark_70;
   transition: transform $transition;
+  overflow-y: scroll;
 
   &--open {
     transform: translateX(100%);
