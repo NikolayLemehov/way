@@ -47,10 +47,12 @@ export default class PopupSuccess {
   }
 
   _onClickOutsideForm(evtDown) {
-    document.addEventListener(`mouseup`, (evtUp) => {
+    const onMouseDown = (evtUp) => {
       if (evtDown.target.classList.contains(`${this.className}`) && evtUp.target.classList.contains(`${this.className}`)) {
         this._close();
       }
-    });
+      document.removeEventListener(`mouseup`, onMouseDown);
+    };
+    document.addEventListener(`mouseup`, onMouseDown);
   }
 }

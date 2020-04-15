@@ -55,7 +55,7 @@ export default class PopupBuyTour {
     }
     openPopup(this.element);
     document.addEventListener(`keydown`, this._onDocumentPopupEscKeyDown);
-    window.addEventListener(`mousedown`, this._onClickOutsideForm);
+    window.addEventListener(`mousedown`, this._onClickOutsideForm, true);
   }
 
   _close() {
@@ -92,10 +92,12 @@ export default class PopupBuyTour {
   }
 
   _onClickOutsideForm(evtDown) {
-    document.addEventListener(`mouseup`, (evtUp) => {
+    const onMouseDown = (evtUp) => {
       if (evtDown.target.classList.contains(`${this.className}`) && evtUp.target.classList.contains(`${this.className}`)) {
         this._close();
       }
-    });
+      document.removeEventListener(`mouseup`, onMouseDown);
+    };
+    document.addEventListener(`mouseup`, onMouseDown);
   }
 }
