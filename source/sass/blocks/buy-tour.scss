@@ -81,6 +81,7 @@
 
 @media (max-width: $desktop_width - 1) {
   .buy-tour__inner {
+    flex-grow: 1;
     width: 100%;
   }
 

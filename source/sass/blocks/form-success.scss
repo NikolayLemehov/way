@@ -52,8 +52,8 @@
 
 @media (max-width: $desktop_width - 1) {
   .form-success__inner {
+    flex-grow: 1;
     width: 100%;
-    margin: 0;
   }
 
   .form-success__container {
