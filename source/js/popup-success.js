@@ -28,7 +28,7 @@ export default class PopupSuccess {
     }
     openPopup(this.element);
     document.addEventListener(`keydown`, this._onDocumentPopupEscKeyDown);
-    window.addEventListener(`click`, this._onClickOutsideForm);
+    window.addEventListener(`mousedown`, this._onClickOutsideForm);
   }
 
   _close() {
@@ -37,7 +37,7 @@ export default class PopupSuccess {
     }
     closePopup(this.element);
     document.removeEventListener(`keydown`, this._onDocumentPopupEscKeyDown);
-    window.removeEventListener(`click`, this._onClickOutsideForm);
+    window.removeEventListener(`mousedown`, this._onClickOutsideForm);
   }
 
   _onDocumentPopupEscKeyDown(evt) {
@@ -46,9 +46,11 @@ export default class PopupSuccess {
     }
   }
 
-  _onClickOutsideForm(evt) {
-    if (evt.target.classList.contains(`${this.className}`)) {
-      this._close();
-    }
+  _onClickOutsideForm(evtDown) {
+    document.addEventListener(`mouseup`, (evtUp) => {
+      if (evtDown.target.classList.contains(`${this.className}`) && evtUp.target.classList.contains(`${this.className}`)) {
+        this._close();
+      }
+    });
   }
 }
