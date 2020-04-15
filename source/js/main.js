@@ -24,6 +24,6 @@ pageHeader.active();
 visitPlace.active(country);
 country.active(popupByTour);
 prices.active(popupByTour);
-questions.active();
+questions.active(popupSuccess);
 popupByTour.active(popupSuccess);
 popupSuccess.active();

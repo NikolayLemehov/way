@@ -8,7 +8,7 @@ export default class Questions {
     this.isAllExisting = this.element && this.formEntity.active();
   }
 
-  active() {
+  active(popupSuccess) {
     if (!this.isAllExisting) {
       return;
     }
@@ -18,6 +18,7 @@ export default class Questions {
       this.formEntity.validateEmail();
       if (this.formEntity.form.checkValidity()) {
         evt.preventDefault();
+        popupSuccess.show();
       }
     });
   }
