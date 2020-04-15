@@ -26,6 +26,10 @@
   letter-spacing: 1px;
   color: $color_darkest_darkest;
 
+  &--phone label {
+    width: 45px;
+  }
+
   input {
     $input_height: 50px;
     width: 100%;
@@ -57,11 +61,10 @@
       position: absolute;
       left: 0;
       top: 0;
-      width: 100%;
       height: $input_height;
       display: flex;
       align-items: center;
-      padding: 0 0 0 15px;
+      padding: 1px 0 0 15px;
     }
 
     &[required] ~ label::before {
