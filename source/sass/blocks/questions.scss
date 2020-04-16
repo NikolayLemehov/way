@@ -6,7 +6,7 @@
   min-height: 455px;
   margin: 0 auto;
   padding: 0;
-  background: url("#{$prefix_css_img}questions-bg-desktop@1x.jpg") no-repeat 25px 0;
+  background: $color_pink url("#{$prefix_css_img}questions-bg-desktop@1x.jpg") no-repeat 25px 0;
 
   @include bg-retina("questions-bg-desktop@2x.jpg");
   background-size: 844px 455px;
@@ -82,7 +82,7 @@
     justify-content: center;
     width: 100%;
     min-height: 456px;
-    background: url("#{$prefix_css_img}questions-bg-tablet@1x.jpg") no-repeat center;
+    background: $color_pink url("#{$prefix_css_img}questions-bg-tablet@1x.jpg") no-repeat center;
 
     @include bg-retina("questions-bg-tablet@2x.jpg");
     background-size: cover;
