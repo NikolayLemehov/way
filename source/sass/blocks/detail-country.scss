@@ -15,6 +15,7 @@
 .detail-country__img picture,
 .detail-country__img img {
   display: block;
+  background-color: $color_gray1;
 }
 
 .detail-country__description {
@@ -144,6 +145,7 @@
   height: 38px;
   border-radius: 50%;
   overflow: hidden;
+  background-color: $color_gray1;
 }
 
 .detail-country__review-cite cite {
