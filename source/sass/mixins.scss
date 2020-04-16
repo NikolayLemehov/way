@@ -26,8 +26,12 @@
   letter-spacing: 1px;
   color: $color_darkest_darkest;
 
-  &--phone label {
+  &--phone input ~ label {
     width: 45px;
+  }
+
+  &--email input ~ label {
+    padding: 1px 0 0 25px;
   }
 
   input {
@@ -38,8 +42,12 @@
     background-color: $color_white;
     border: 1px solid $color_dark_30;
 
-    &[required] {
+    &[required][name="phone"] {
       padding-left: 48px;
+    }
+
+    &[required][name="email"] {
+      padding-left: 27px;
     }
 
     &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -64,17 +72,17 @@
       height: $input_height;
       display: flex;
       align-items: center;
-      padding: 1px 0 0 15px;
+      padding: 1px 0 0 25px;
     }
 
     &[required] ~ label::before {
       content: "";
-      position: relative;
-      left: 0;
-      top: -12px;
+      position: absolute;
+      left: 15px;
+      top: 10px;
       width: 6px;
       height: 7px;
-      margin: 0 5px 0 0;
+      margin: 0;
       background: url("#{$prefix_css_img}required.svg") no-repeat 0 0;
     }
 
