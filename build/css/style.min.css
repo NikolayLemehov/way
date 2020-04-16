@@ -395,9 +395,11 @@ input[type="radio"].visually-hidden {
   -webkit-transition: background-color 0.3s ease-in, opacity 0.3s ease-in;
   transition: background-color 0.3s ease-in, opacity 0.3s ease-in; }
   .btn:hover {
-    background-color: #f17d4b; }
+    background-color: #f17d4b;
+    cursor: pointer; }
   .btn:active {
     background-color: #f17d4b;
+    cursor: pointer;
     opacity: 0.6; }
 
 .popup {
@@ -2302,9 +2304,11 @@ input[type="radio"].visually-hidden {
   -webkit-transition: opacity 0.3s ease-in;
   transition: opacity 0.3s ease-in; }
   .buy-tour__close-btn:hover {
-    opacity: 0.6; }
+    opacity: 0.6;
+    cursor: pointer; }
   .buy-tour__close-btn:active {
-    opacity: 0.3; }
+    opacity: 0.3;
+    cursor: pointer; }
   .buy-tour__close-btn svg {
     display: block; }
 
@@ -2465,9 +2469,11 @@ input[type="radio"].visually-hidden {
   -webkit-transition: opacity 0.3s ease-in;
   transition: opacity 0.3s ease-in; }
   .form-success__close-btn:hover {
-    opacity: 0.6; }
+    opacity: 0.6;
+    cursor: pointer; }
   .form-success__close-btn:active {
-    opacity: 0.3; }
+    opacity: 0.3;
+    cursor: pointer; }
   .form-success__close-btn svg {
     display: block; }
 
