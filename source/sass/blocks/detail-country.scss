@@ -9,13 +9,22 @@
   z-index: -1;
   left: calc(50% - 116px);
   top: auto;
+  display: flex;
+  width: 430px;
+  height: 596px;
   margin-top: 2px;
-}
 
-.detail-country__img picture,
-.detail-country__img img {
-  display: block;
-  background-color: $color_gray1;
+  picture {
+    display: flex;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    object-position: left bottom;
+    background-color: $color_gray1;
+  }
 }
 
 .detail-country__description {
@@ -218,6 +227,7 @@
     justify-content: flex-start;
     align-items: center;
     width: 100%;
+    height: auto;
     min-height: 415px;
   }
 

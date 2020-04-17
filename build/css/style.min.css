@@ -1223,12 +1223,24 @@ input[type="radio"].visually-hidden {
   z-index: -1;
   left: calc(50% - 116px);
   top: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 430px;
+  height: 596px;
   margin-top: 2px; }
-
-.detail-country__img picture,
-.detail-country__img img {
-  display: block;
-  background-color: #d8d8d8; }
+  .detail-country__img picture {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .detail-country__img img {
+    display: block;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: left bottom;
+       object-position: left bottom;
+    background-color: #d8d8d8; }
 
 .detail-country__description {
   width: 384px;
@@ -1419,6 +1431,7 @@ input[type="radio"].visually-hidden {
         -ms-flex-align: center;
             align-items: center;
     width: 100%;
+    height: auto;
     min-height: 415px; }
   .detail-country__img {
     left: 0;
