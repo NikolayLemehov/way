@@ -651,7 +651,7 @@ const iMask = () => {
       if (n < 0 || n == Infinity) throw RangeError('Wrong number of repetitions');
 
       for (; n > 0;
-             (n >>>= 1) && (str += str))
+              (n >>>= 1) && (str += str))
         if (n & 1) result += str;
 
       return result;

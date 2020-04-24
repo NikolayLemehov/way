@@ -1238,8 +1238,8 @@ input[type="radio"].visually-hidden {
     width: 100%;
     -o-object-fit: cover;
        object-fit: cover;
-    -o-object-position: left bottom;
-       object-position: left bottom;
+    -o-object-position: center;
+       object-position: center;
     background-color: #d8d8d8; }
 
 .detail-country__description {
