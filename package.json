@@ -27,7 +27,7 @@
     "posthtml-include": "^1.2.0",
     "stylelint": "9.10.x",
     "stylelint-config-htmlacademy": "0.1.x",
-    "webpack": "4.42.0",
+    "webpack": "5.94.0",
     "webpack-stream": "5.2.1"
   },
   "scripts": {
